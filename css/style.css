@@ -1,0 +1,15 @@
+div.wrapper {
+    background-color: #689CD3;   
+}
+
+nav.my-nav {
+    background-color: #0D58A6;
+};
+
+footer.my-footer {
+    background-color: #04376C;
+};
+
+.nav-text {
+    color:ghostwhite !important;
+};
