@@ -17,7 +17,6 @@
         }
         .modules table { width: 90%; }
         td {
-            color:dodgerblue;
             border: solid black 1px;
             border-top: none;
             border-collapse: collapse;
@@ -32,14 +31,10 @@
         a:link { 
             text-decoration: none;
             display:block;
-            color: darkslateblue;
+            color: dodgerblue;
             text-align:center;
         }
         .modules a:link { text-align:left; }
-        a:hover { 
-            color: #fff;
-            background: #555;
-        }
         tr { 
             display: flex;
             flex-direction:row;
@@ -50,6 +45,8 @@
             flex: 1 1 auto;
             padding: 0 7px 0 7px;
         }
+        td:hover { background: #555; }
+        td:hover > a { color: #fff; }
     </style>
   </head>
   <body>
