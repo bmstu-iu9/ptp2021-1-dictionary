@@ -1,75 +1,86 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Searchpage</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style>        
+        table { 
+            background-color:antiquewhite;
+            border-left: 5px solid dodgerblue;
+            border-right: 5px solid dodgerblue;
+            width: 100%;
+            table-layout:fixed; 
+        }
+        .modules table { width: 90%; }
+        td {
+            color:dodgerblue;
+            border: solid black 1px;
+            border-top: none;
+            border-collapse: collapse;
+            margin:0;
+        }
+        th {
+            color: dodgerblue;
+            border: solid black 1px;
+            border-collapse:collapse;
+            width:100%;
+        }
+        a:link { 
+            text-decoration: none;
+            display:block;
+            color: darkslateblue;
+            text-align:center;
+        }
+        .modules a:link { text-align:left; }
+        a:hover { 
+            color: #fff;
+            background: #555;
+        }
+        tr { 
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content:flex-start;
+        }
+        td { 
+            flex: 1 1 auto;
+            padding: 0 7px 0 7px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light my-nav">
+            <div class="container-fluid mt-2 mb-2">
+                <a class="navbar-brand" style="color: #fff;" href="#">name</a>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Searchpage</title>
-
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <style>
-            table { 
-                background-color:antiquewhite;
-                border-left: 5px solid dodgerblue;
-                border-right: 5px solid dodgerblue;
-                width: 100%;
-                table-layout:fixed; 
-            }
-            .modules table { width: 90%; }
-            tr, td, th { 
-               // padding: 15px;
-                color:dodgerblue;
-                border: solid black 1px;
-            }
-            a:link { 
-                text-decoration: none;
-                display:block;
-                color: darkslateblue;
-                text-align:center;
-            }
-            .modules a:link { text-align:left; }
-            a:hover { 
-                color: #fff;
-                background: #555;
-            }
-            body { min-width: 960px; }
-            hr { 
-                border: solid white 2px;
-                margin: auto;
-                width: 95%;
-            }
-            //tr { display: block; }
-        </style>
-    </head>
-
-    <body>
-        <div class="wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light my-nav">
-                <div class="container-fluid mt-2 mb-2">
-                    <a class="navbar-brand" style="color: #fff;" href="#">name</a>
-                    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav nav-text">
-                            <a class="nav-link" style="color: #fff;" href="#">link1</a>
-                            <a class="nav-link" style="color: #fff;"href="#">link2</a>
-                            <a class="nav-link" style="color: #fff;" href="#">link3</a>
-                            <a class="nav-link" style="color: #fff;" href="#">link4</a>
-                        </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav nav-text">
+                        <a class="nav-link" style="color: #fff;" href="#">link1</a>
+                        <a class="nav-link" style="color: #fff;"href="#">link2</a>
+                        <a class="nav-link" style="color: #fff;" href="#">link3</a>
+                        <a class="nav-link" style="color: #fff;" href="#">link4</a>
                     </div>
+
                 </div>
-            </nav>
-            <br><br>
-            <div class="letters">
+            </div>
+        </nav>
+    </div>
+        <div class="letters">
                 <center>
                     <table>
-                        <th colspan=26><center><h2>Поиск по первой букве</h2></center></th>
+                        <th><center><h2>Поиск по первой букве</h2></center></th>
                         <tr>
                         <script>
                             for (var i = 0; i < 26 ; i++) {
@@ -99,20 +110,20 @@
             <div class="all">
                 <center>
                     <table>
-                        <th colspan=20><h2><center>Все слова</center></h2></th>
+                        <th><h2><center>Все слова</center></h2></th>
                         <tr><script type="text/javascript" src="assets/words.js"></script></tr>
                     </table>
-                    <br><br>
                 </center>
             </div>
-            <footer class="text-center text-lg-start my-footer mt-5">
-                <hr>
-                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0);"> Copyright
-                </div>
-            </footer>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <footer class="text-center text-lg-start  mt-5 my-footer" >
+            <div class="text-center p-4" > Copyright
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 
     
 </html>
+
+
