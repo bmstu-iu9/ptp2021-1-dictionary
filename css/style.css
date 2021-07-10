@@ -1,0 +1,31 @@
+body {
+    background-color: #c6d8ec;
+    padding: 2.5%;
+ }
+
+.card-style {
+    background-color:#faf7f0;
+    border: 2px solid #4476fb;
+    color: #4476fb;
+}
+
+.word-link {
+    text-decoration: none;
+    color: #4476fb;
+}
+
+div.wrapper {
+    background-color: #689CD3;   
+}
+
+nav.my-nav {
+    background-color: #689cd3;
+}
+
+footer.my-footer {
+    background-color: #faf7f0;
+}
+
+.nav-text {
+    color:ghostwhite !important;
+}
