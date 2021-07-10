@@ -816,12 +816,9 @@ var json = [
 			"module": 11
 		}
 	];
+//document.write('<tr>');
 for (i in json) {
-    if (j == 0) { document.write('<tr>'); }
-    document.write('<td><a href="#" title="Показать информацию об этом слове">' + json[i].word + '</a></td>');
-    j = j + 1;
-    if (j == 20) { 
-        document.write('</tr>');
-        j = 0;
-                }
+    document.write('<td><a href="#" title="Показать информацию об этом слове">' + json[i].word + ' (' + json[i].pos + ')</a></td>');
 }
+//document.write('</tr');
+
