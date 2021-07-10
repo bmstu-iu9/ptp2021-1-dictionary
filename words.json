@@ -1,6 +1,5 @@
 {
-	"entries": [
-		{
+	"entries": [{
 			"word": "application ",
 			"translation": "применение",
 			"transcription": "|æplɪˈkeɪʃ(ə)n|",
@@ -813,6 +812,226 @@
 				"ru": "Кто разработал первый сверхпроводящий провод?"
 			}],
 			"module": 11
+		},
+		{
+			"word": "Abbreviation ",
+			"translation": "сокращение, аббревиатура",
+			"transcription": "/əˌbriːviˈeɪʃn/ ",
+			"pos": "n",
+			"examples": [{
+				"eng": "DNA is the abbreviation for deoxyribonucleic acid.",
+				"ru": "ДНК – аббревиатура от дезоксирибонуклеиновая кислота."
+			}],
+			"module": 5
+		},
+		{
+			"word": "abridge ",
+			"translation": "сокращать, ограничивать",
+			"transcription": "/əˈbrɪdʒ/ ",
+			"pos": "v",
+			"examples": [{
+				"eng": "She has been asked to abridge the novel for radio.",
+				"ru": "Ее попросили сократить роман для трансляции по радио."
+			}],
+			"module": 5
+		},
+		{
+			"word": "absence of pattern  ",
+			"translation": "бессистемность",
+			"transcription": "/ˈæbsəns əv ˈpætn/",
+			"pos": "phr",
+			"examples": [{
+				"eng": "Positive record of Ukraine in securing minority rights, absence of pattern and practice of discrimination have been confirmed by a number of authoritative international bodies.",
+				"ru": "Безупречная репутация Украины в деле обеспечения прав меньшинств, отсутствие систематических и отдельных проявлений дискриминации подтверждены целым рядом авторитетных международных органов."
+			}],
+			"module": 5
+		},
+		{
+			"word": "access key ",
+			"translation": "клавиша/ключ доступа",
+			"transcription": "/ˈækses kiː/",
+			"pos": "phr",
+			"examples": [{
+				"eng": "Guards have access keys to the stairwell.",
+				"ru": "У охранников есть ключи доступа на лестничную клетку."
+			}],
+			"module": 5
+		},
+		{
+			"word": "accuracy ",
+			"translation": "безошибочность, точность",
+			"transcription": "/ˈækjərəsi/",
+			"pos": "n",
+			"examples": [{
+				"eng": "They questioned the accuracy of the information in the file.",
+				"ru": "Они сомневались в точности информации в файле. "
+			}],
+			"module": 5
+		},
+		{
+			"word": "accurate ",
+			"translation": "правильный, точный",
+			"transcription": "/ˈækjərət/ ",
+			"pos": "adj",
+			"examples": [{
+				"eng": "Automatic translation isn’t that accurate, but it was certainly better than starting from scratch.",
+				"ru": "Автоматический перевод не такой точный, но работать с его использованием лучше, чем начинать с чистого листа."
+			}],
+			"module": 5
+		},
+		{
+			"word": "action ",
+			"translation": "действие, операция",
+			"transcription": "/ˈækʃn/",
+			"pos": "n",
+			"examples": [{
+				"eng": "A computer program which does things in reaction to your actions is interactive.",
+				"ru": "Компьютерная программа, которая реагирует на ваши действия, называется интерактивной."
+			}],
+			"module": 5
+		},
+		{
+			"word": "action bar ",
+			"translation": "горизонтальное меню",
+			"transcription": "/ˈækʃn bɑː(r)/",
+			"pos": "phr",
+			"examples": [{
+				"eng": "When an update is available, an icon in the action bar displays some explaining text.",
+				"ru": "Если доступно обновление, значок в горизонтальном меню отображает текст пояснения."
+			}],
+			"module": 5
+		},
+		{
+			"word": "Ada programming language ",
+			"translation": "язык программирования АДА",
+			"transcription": "/ 'eɪdə ˈprəʊɡræmɪŋ ˈlæŋɡwɪdʒ/",
+			"pos": "phr",
+			"examples": [{
+				"eng": "In 1980, the US Department of Defense settled on (in honour of Ada Lovelace) the name Ada for a new standardized programming language.",
+				"ru": "В 1980 американское Министерство обороны выбрало (в честь Ады Лавлейс) название АДА для нового типового языка программирования."
+			}],
+			"module": 5
+		},
+		{
+			"word": "alter ",
+			"translation": "изменять, переставлять",
+			"transcription": "/ˈɔːltə(r)/ ",
+			"pos": "v",
+			"examples": [{
+				"eng": "There is no reason to alter those basic parameters.",
+				"ru": "Нет причин изменять эти основные параметры."
+			}],
+			"module": 5
+		},
+		{
+			"word": "backup ",
+			"translation": "дублирующий",
+			"transcription": "/ˈbækʌp/ ",
+			"pos": "adj",
+			"examples": [{
+				"eng": "We could switch the sensor input to the backup scanners.",
+				"ru": "Мы можем переключить ввод данных на сенсоры с основных сканеров на дублирующие."
+			}],
+			"module": 5
+		},
+		{
+			"word": "bit ",
+			"translation": "двоичная цифра (бит) ",
+			"transcription": "/bɪt/",
+			"pos": "n  ",
+			"examples": [{
+				"eng": "A bit is the smallest unit of information used by a computer.",
+				"ru": "Бит – мельчайшая единица информации, используемая компьютером."
+			}],
+			"module": 5
+		},
+		{
+			"word": "bit density ",
+			"translation": "плотность записи",
+			"transcription": "/bɪt ˈdensəti/",
+			"pos": "phr",
+			"examples": [{
+				"eng": "A bit density and volume of the information which can be recorded to the unit of the plate surface depend on the sizes of domains.",
+				"ru": "Плотность записи, количество информации, которое может быть записано на единицу поверхности пластины, связано с размерами доменов."
+			}],
+			"module": 5
+		},
+		{
+			"word": "built-in ",
+			"translation": "встроенный",
+			"transcription": "/ˌbɪlt ˈɪn/ ",
+			"pos": "adj",
+			"examples": [{
+				"eng": "The device has a built-in microphone and speakers.",
+				"ru": "У этого устройства присутствует встроенный микрофон и динамики."
+			}],
+			"module": 5
+		},
+		{
+			"word": "calculate ",
+			"translation": "вычислять, рассчитывать",
+			"transcription": "/ˈkælkjuleɪt/ ",
+			"pos": "v",
+			"examples": [{
+				"eng": "Use the formula to calculate the volume of the container.",
+				"ru": "Используйте формулу для расчета объема контейнера."
+			}],
+			"module": 5
+		},
+		{
+			"word": "calculating machine ",
+			"translation": "счётная машина",
+			"transcription": "/ˈkælkjuleɪtɪŋ məˈʃiːn/ ",
+			"pos": "n",
+			"examples": [{
+				"eng": "In 1623 Wilhelm Schickard designed a calculating machine, but abandoned the project, when the prototype he had started building was destroyed by a fire in 1624.",
+				"ru": "В 1623 году Вильгельм Шиккард разработал счётную машину, но отказался от проекта, когда прототип, который он начал строить, был уничтожен пожаром в 1624 году."
+			}],
+			"module": 5
+		},
+		{
+			"word": "cancel ",
+			"translation": "отменять, прервать",
+			"transcription": "/ˈkænsl/ ",
+			"pos": "v",
+			"examples": [{
+				"eng": "The wedding was cancelled at the last minute.",
+				"ru": "Свадьбу отменили в последний момент."
+			}],
+			"module": 5
+		},
+		{
+			"word": "canned software ",
+			"translation": "стандартное программное обеспечение",
+			"transcription": "/kænd ˈsɒftweə(r)/",
+			"pos": "phr",
+			"examples": [{
+				"eng": "Canned software is a software product or solution that cannot be modified or altered beyond the original functionality.",
+				"ru": "Стандартное программное обеспечение – это программное обеспечение, исходный функционал которого не может быть изменен. "
+			}],
+			"module": 5
+		},
+		{
+			"word": "capacity ",
+			"translation": "возможность, ёмкость, нагрузка",
+			"transcription": "/kəˈpæsəti/ ",
+			"pos": "n",
+			"examples": [{
+				"eng": "The storage capacity of the brain is thought to be over 10 terabytes.",
+				"ru": "Считается, что ёмкость памяти мозга превышает 10 терабайтов. "
+			}],
+			"module": 5
+		},
+		{
+			"word": "circuit ",
+			"translation": "схема, цепь",
+			"transcription": "/ˈsɜːkɪt/ ",
+			"pos": "n",
+			"examples": [{
+				"eng": "Flexible electronics are circuits and systems that can be bent, folded, stretched or rolled up without losing their functionality",
+				"ru": "Гибкая электроника – это схемы и системы, которые можно гнуть, сгибать, растягивать и скручивать без поломок."
+			}],
+			"module": 5
 		}
 	]
 }
