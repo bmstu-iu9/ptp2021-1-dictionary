@@ -14,18 +14,26 @@ body {
     color: #4476fb;
 }
 
-div.wrapper {
-    background-color: #689CD3;   
+.wrapper {
+    background-color: #689CD3;
+    color: #4476fb;
+    border-color: #4476fb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-nav.my-nav {
-    background-color: #689cd3;
+.nav-link {
+    background-color: #689CD3;
+    color: #4476fb;
+    border-color:#4476fb;
 }
 
-footer.my-footer {
+.my-footer {
     background-color: #faf7f0;
+
 }
 
 .nav-text {
-    color:ghostwhite !important;
-}
+    color: #4476fb;
+};
