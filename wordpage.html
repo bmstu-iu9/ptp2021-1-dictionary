@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>main template</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+    <body onload="showworddata()">
+        <div class="wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light my-nav">
+                <div class="container-fluid mt-2 mb-2">
+                    <a class="navbar-brand" style="color: #fff;" href="#">name</a>
+                    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav nav-text">
+                            <a class="nav-link" style="color: #fff;" href="#">link1</a>
+                            <a class="nav-link" style="color: #fff;"href="#">link2</a>
+                            <a class="nav-link" style="color: #fff;" href="#">link3</a>
+                            <a class="nav-link" style="color: #fff;" href="#">link4</a>
+                        </div>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content">
+                
+            </div>
+        </div>
+		
+		<div class="infosheet">
+			<h3 id="wordandtranclation"></h3>
+			<p id="exampleeng"></p>
+			<p id="exampleru"></p>
+		</div>
+		
+        <footer class="text-center text-lg-start my-footer mt-5">
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);"> Copyright
+            </div>
+        </footer>
+		
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="assets/words.js" defer></script>
+		<script type="text/javascript" defer>
+			function showworddata()
+			{
+                var mydata = json;
+				
+				var index = 0;
+
+				var wordandtranclation = document.getElementById('wordandtranclation');
+				var exampleeng = document.getElementById('exampleeng');
+				var exampleru = document.getElementById('exampleru');
+
+				wordandtranclation.innerHTML = mydata[index].word + "(" + mydata[index].pos + ") - " + mydata[index].translation + "	" + mydata[index].transcription;
+				exampleeng.innerHTML = mydata[index].examples[index].eng;
+				exampleru.innerHTML = mydata[index].examples[index].ru;
+            }
+		</script>
+		
+    </body>
+
+    
+</html>
