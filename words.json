@@ -1032,6 +1032,237 @@
 				"ru": "Гибкая электроника – это схемы и системы, которые можно гнуть, сгибать, растягивать и скручивать без поломок."
 			}],
 			"module": 5
+		},
+		{
+			"word": "acquaintance  ",
+			"translation": "знакомство, знакомый",
+			"transcription": "/əˈkweɪntəns/",
+			"pos": "n",
+			"examples": [{
+				"eng": "Do you have any friends and acquaintances who are juniors or even seniors?",
+				"ru": "Есть ли у вас друзья и знакомые младшего или даже старшего возраста?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "affect ",
+			"translation": "влиять, воздействовать, затрагивать",
+			"transcription": "/əˈfekt/",
+			"pos": "v",
+			"examples": [{
+				"eng": "Will the rainy weather affect the election results?",
+				"ru": "Повлияет ли дождливая погода на результаты выборов?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "ability ",
+			"translation": "способность, возможность, умение",
+			"transcription": "/əˈbɪləti/",
+			"pos": "n",
+			"examples": [{
+				"eng": "MSTU is intensely focused on creating unique scientific and educational environment aimed at the fulfillment of tasks of the research university and the ability to form a scientific and engineering elite.",
+				"ru": "МГТУ уделяет большое внимание созданию уникальной научно-образовательной среды, направленной на выполнение задач исследовательского университета и возможность формирования научной и инженерной элиты."
+			}],
+			"module": 1
+		},
+		{
+			"word": "become ",
+			"translation": "становиться",
+			"transcription": "/bɪˈkʌm/",
+			"pos": "v",
+			"examples": [{
+				"eng": "You have already finished high school and become a college or university student.",
+				"ru": "Вы уже закончили среднюю школу и стали студентом колледжа или университета."
+			}],
+			"module": 1
+		},
+		{
+			"word": "brain ",
+			"translation": "мозг",
+			"transcription": "/breɪn/",
+			"pos": "n",
+			"examples": [{
+				"eng": "We know that physical activity affects the brain in a number of positive ways and one of those is a boost to memory. ",
+				"ru": "Мы знаем, что физическая активность влияет на мозг разными положительными способами, и одно из них - улучшение памяти."
+			}],
+			"module": 1
+		},
+		{
+			"word": "consider ",
+			"translation": "рассматривать, учитывать, считать",
+			"transcription": "/kənˈsɪdə(r)/",
+			"pos": "v",
+			"examples": [{
+				"eng": "Accept means to agree to take something or to consider something as reasonable or true",
+				"ru": "Принять означает согласиться принять что-либо или считать что-то разумным или истинным."
+			}],
+			"module": 1
+		},
+		{
+			"word": "education ",
+			"translation": "образование, воспитание",
+			"transcription": "/ˌedʒuˈkeɪʃn/",
+			"pos": "n",
+			"examples": [{
+				"eng": "The system of engineering education gained recognition all over the world.",
+				"ru": "Система инженерного образования получила признание во всем мире."
+			}],
+			"module": 1
+		},
+		{
+			"word": "engineer",
+			"translation": "инженер",
+			"transcription": "/ˌendʒɪˈnɪə(r)/",
+			"pos": "n",
+			"examples": [{
+				"eng": "Why did you decide to become an engineer?",
+				"ru": "Почему ты решил стать инженером?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "ensure ",
+			"translation": "гарантировать, обеспечивать",
+			"transcription": "/ɪnˈʃʊə(r)/",
+			"pos": "v",
+			"examples": [{
+				"eng": "Is higher education essential to ensure the future success of graduates?",
+				"ru": "Важно ли высшее образование для того, чтобы обеспечить будущие успехи выпускников?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "especially ",
+			"translation": "особенно, специально",
+			"transcription": "/ɪˈspeʃəli/",
+			"pos": "adv",
+			"examples": [{
+				"eng": "To take a nap is to get a brief sleep, especially during the day.",
+				"ru": "To take a nap - значит ненадолго поспать, особенно днем."
+			}],
+			"module": 1
+		},
+		{
+			"word": "experience ",
+			"translation": "опыт",
+			"transcription": "/ɪkˈspɪəriəns/",
+			"pos": "n",
+			"examples": [{
+				"eng": "Do you have any experience in working with children?",
+				"ru": "Есть ли у вас опыт работы с детьми?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "grade ",
+			"translation": "оценка, ранг, степень, сортировать",
+			"transcription": "/ɡreɪd/",
+			"pos": "n v",
+			"examples": [{
+				"eng": "But which scientific tips can help you get those perfect grades?",
+				"ru": "Но какие научные советы помогут вам получить отличные оценки?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "graduate ",
+			"translation": "выпускник, оканчивать учебное заведение",
+			"transcription": "/ˈɡrædʒuət/",
+			"pos": "n v",
+			"examples": [{
+				"eng": "Is higher education essential to ensure the future success of graduates?",
+				"ru": "Важно ли высшее образование для обеспечения будущих успехов выпускников?"
+			}],
+			"module": 1
+		},
+		{
+			"word": "higher",
+			"translation": "высший",
+			"transcription": "/ˈhaɪə(r)/",
+			"pos": "a",
+			"examples": [{
+				"eng": "MSTU was the first among technical higher educational institutions that received the status of technical university in 1989.",
+				"ru": "МГТУ первым среди технических высших учебных заведений получил статус технического вуза в 1989 году."
+			}],
+			"module": 1
+		},
+		{
+			"word": "improve ",
+			"translation": "улучшать, совершенствовать",
+			"transcription": "/ɪmˈpruːv/",
+			"pos": "v",
+			"examples": [{
+				"eng": "Some studies have shown that certain types of classical music can help improve concentration.",
+				"ru": "Некоторые исследования показали, что определенные виды классической музыки могут помочь улучшить концентрацию внимания."
+			}],
+			"module": 1
+		},
+		{
+			"word": "mean ",
+			"translation": "значить, означать, иметь в виду",
+			"transcription": "/miːn/",
+			"pos": "v",
+			"examples": [{
+				"eng": "Alice thinks that stress means pressure or worry caused by a difficult situation.",
+				"ru": "Алиса считает, что стресс означает давление или беспокойство, вызванное сложной ситуацией."
+			}],
+			"module": 1
+		},
+		{
+			"word": "memory",
+			"translation": "память, воспоминание",
+			"transcription": "/ˈmeməri/",
+			"pos": "n",
+			"examples": [{
+				"eng": "Memory is hard to work with, but it is still malleable and you can force memories into your brain.",
+				"ru": "С памятью сложно работать, но она по-прежнему податлива, и вы можете вбить воспоминания в свой мозг."
+			}],
+			"module": 1
+		},
+		{
+			"word": "receive ",
+			"translation": "получать, принимать",
+			"transcription": "/rɪˈsiːv/",
+			"pos": "v",
+			"examples": [{
+				"eng": "I will receive my bachelor’s degree in the spring.",
+				"ru": "Весной я получу степень бакалавра."
+			}],
+			"module": 1
+		},
+		{
+			"word": "remember",
+			"translation": "вспоминать, помнить",
+			"transcription": "/rɪˈmembə(r)/",
+			"pos": "v",
+			"examples": [{
+				"eng": "She remembered to close the windows before she went out.",
+				"ru": "Она вспомнила, что нужно закрыть окна перед выходом."
+			}],
+			"module": 1
+		},
+		{
+			"word": "quality ",
+			"translation": "качество",
+			"transcription": "/ˈkwɒləti/",
+			"pos": "n",
+			"examples": [{
+				"eng": "The quality of training at the university is determined by the educational standards and programs.",
+				"ru": "Качество обучения в вузе определяется образовательными стандартами и программами."
+			}],
+			"module": 1
+		},
+		{
+			"word": "usually ",
+			"translation": "обычно",
+			"transcription": "/ˈjuːʒuəli/",
+			"pos": "adv",
+			"examples": [{
+				"eng": "She usually designs books but she also works on a lot of other things.",
+				"ru": "Обычно она занимается дизайном книг, но работает и над множеством других вещей."
+			}],
+			"module": 1
 		}
 	]
 }
