@@ -1,0 +1,59 @@
+
+body {
+  background-color: #c6d8ec;
+  padding: 2.5%;
+}
+
+.dict_btn{
+  background-color: #faf7f0;
+  border: 2px solid #4476fb;
+  color: #4476fb;
+}
+
+.infosheet{
+  text-align: center;
+  background-color: #faf7f0;
+  border: 2px solid #4476fb;
+  border-radius: 15px;
+  color: #4476fb;
+  padding: 3%;
+}
+#exercise{
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size:120%;
+  color: #4476fb;
+}
+.answerForm{
+  color: #4476fb;
+}
+
+#submitAnsw{
+  background-color: #c6d8ec;
+  color: #4476fb;
+  border: 2px solid #4476fb;
+  border-radius: 6px;
+}
+
+.wrapper {
+    background-color: #689CD3;
+    color: #4476fb;
+    border-color: #4476fb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-link {
+    background-color: #689CD3;
+    color: #4476fb;
+    border-color:#4476fb;
+}
+
+.my-footer {
+    background-color: #faf7f0;
+
+}
+
+.nav-text {
+    color: #4476fb;
+};
