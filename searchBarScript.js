@@ -46,6 +46,7 @@ function suggestElements(arrOfMatches){
       let myLink = document.createElement("a");
       myLink.innerHTML = element;
       myLink.href = "#";
+      myLink.style = "margin: 1%;";
       let myBreak = document.createElement("br");      
       mySuggestions.appendChild(myLink);
       mySuggestions.appendChild(myBreak);
