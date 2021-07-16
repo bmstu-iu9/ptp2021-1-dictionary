@@ -4,10 +4,16 @@ import words from "./words.json" assert { type: "json" }; /*now that's quite som
 
 
 
+//  функция searchMatchingElements.
+//  если pattern -- пустая строка, возвращает пустой массив.
+//  иначе ищет строгие соответствия в массиве words при помощи регулярного выражения.
+//  не чувствительна к регистру (флаг i в регулярном выражении).
+//  возвращает массив совпадений.
+//  оптимизировать еще больше не стану тк в объекте в 2000 слов показывает скорость менее милисекунды.
+//  нам этого более чем достаточно.
 
 function searchMatchingElements(pattern){
   if (pattern == '') {
-    console.log('функция searchMatchingElements сработала выдав пустой список');
     return [];
   }
   let arrOfMatches = [];
@@ -16,10 +22,11 @@ function searchMatchingElements(pattern){
       arrOfMatches.push(element.word);
   }
   });
-  console.log('функция searchMatchingElements сработала');
   return arrOfMatches;
 }
 
+//  функция clearPreviouslySuggestedElements.
+//  очищает div "mySuggestions" от всех элементов
 
 function clearPreviouslySuggestedElements(){
   let mySuggestions = document.getElementById("mySuggestions"); 
@@ -27,9 +34,10 @@ function clearPreviouslySuggestedElements(){
   for (; previouslySuggestedElements.length > 0 ;) {
     mySuggestions.removeChild(previouslySuggestedElements[0]);
   }
-  console.log('функция clear сработала');
 }
 
+//  функция suggestElements.
+//  заполняет div "mySuggestions" ссылками на словарные статьи.
 
 function suggestElements(arrOfMatches){
   clearPreviouslySuggestedElements();
@@ -42,22 +50,22 @@ function suggestElements(arrOfMatches){
       mySuggestions.appendChild(myLink);
       mySuggestions.appendChild(myBreak);
     });
-    console.log('функция suggestElements сработала');
 }
 
+//  функция getMyInputValue.
+//  достает то, что записано в  поисковой строке.
 
 function getMyInputValue(){
   let myInput = document.getElementById("myInput");
   let myValue = myInput.value;
-  console.log(myValue);
-  console.log('функция getValue сработала');
   return myValue;
 }
 
+//  функция myAction.
+//  нудна для обработки события нажатия на кнопку.
 
-function myAction(){
-  suggestElements(searchMatchingElements(getMyInputValue()));
-  console.log('функция myAction сработала');
+function myAction(){ 
+  suggestElements(searchMatchingElements(getMyInputValue()));  
 }
 
 
