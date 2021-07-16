@@ -6,6 +6,10 @@ import words from "./words.json" assert { type: "json" }; /*now that's quite som
 
 
 function searchMatchingElements(pattern){
+  if (pattern == '') {
+    console.log('функция searchMatchingElements сработала выдав пустой список');
+    return [];
+  }
   let arrOfMatches = [];
   words.entries.forEach(element => {
     if(RegExp("^"+pattern, "i").test(element.word)){
@@ -32,9 +36,9 @@ function suggestElements(arrOfMatches){
   let mySuggestions = document.getElementById("mySuggestions"); 
     arrOfMatches.forEach(element => {
       let myLink = document.createElement("a");
-      let myBreak = document.createElement("br");
       myLink.innerHTML = element;
       myLink.href = "#";
+      let myBreak = document.createElement("br");      
       mySuggestions.appendChild(myLink);
       mySuggestions.appendChild(myBreak);
     });
@@ -43,8 +47,8 @@ function suggestElements(arrOfMatches){
 
 
 function getMyInputValue(){
-  var myInput = document.getElementById("myInput");
-  var myValue = myInput.value;
+  let myInput = document.getElementById("myInput");
+  let myValue = myInput.value;
   console.log(myValue);
   console.log('функция getValue сработала');
   return myValue;
@@ -58,4 +62,4 @@ function myAction(){
 
 
 
-document.getElementById('myInput') .onkeyup = myAction
+document.getElementById('myInput').onkeyup = myAction;
