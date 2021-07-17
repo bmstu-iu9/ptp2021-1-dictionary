@@ -1,6 +1,6 @@
 'use strict';
 
-import words from "./words.json" assert { type: "json" }; /*now that's quite something*/
+import words from "../json/words.json" assert { type: "json" }; /*now that's quite something*/
 
 
 
@@ -46,10 +46,8 @@ function suggestElements(arrOfMatches){
       let myLink = document.createElement("a");
       myLink.innerHTML = element;
       myLink.href = "#";
-      myLink.style = "margin: 1%;";
-      let myBreak = document.createElement("br");      
+      myLink.style = "margin: 1%;";     
       mySuggestions.appendChild(myLink);
-      mySuggestions.appendChild(myBreak);
     });
 }
 
