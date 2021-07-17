@@ -56,4 +56,75 @@ body {
 
 .nav-text {
     color: #4476fb;
-};
+}
+
+table { 
+  background-color:antiquewhite;
+  border-left: 5px solid dodgerblue;
+  border-right: 5px solid dodgerblue;
+  width: 100%;
+  table-layout:fixed; 
+}
+
+.modules table { width: 90%; }
+
+td {
+  border: solid black 1px;
+  border-top: none;
+  border-collapse: collapse;
+  margin:0;
+}
+
+th {
+  color: dodgerblue;
+  border: solid black 1px;
+  border-collapse:collapse;
+  width:100%;
+}
+
+a:link { 
+  text-decoration: none;
+  display:block;
+  color: dodgerblue;
+  text-align:center;
+}
+
+.modules a:link { text-align:left; }
+
+tr { 
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+
+td { 
+  flex: 1 1 auto;
+  padding: 0 7px 0 7px;
+}
+
+td:hover { 
+  background: #555;
+  transition: 0.3s;
+}
+
+td:hover > a { 
+  color: #fff;
+  transition: 0.3s;
+}
+
+.card-style {
+  background-color:#faf7f0;
+  border: 2px solid #4476fb;
+  color: #4476fb;
+}
+.word-link {
+  text-decoration: none;
+  color: #4476fb;
+}
+
+#mySuggestions{
+  border-radius: 10px;
+   background-color: #fff; 
+    position: fixed;
+}
