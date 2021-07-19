@@ -5,7 +5,7 @@ function write_module_words(n) {
     for (let i = 0; i < words.length; i++) {
         if (words[i].module == n) {
             let word_translation = document.createElement("a");
-            word_translation.href = "#";
+            word_translation.href = "wordpage.html?wordnumber=" + i;
             word_translation.innerHTML =  words[i].word[0].toUpperCase() +  words[i].word.slice(1) + " - " + words[i].translation;
             word_translation.className = "word-link";
             card_body.appendChild(word_translation);
