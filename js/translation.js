@@ -62,7 +62,7 @@ function checkAnswer(want) {
     var yes = 0;
     for (var i = 0 ; i < want.length ; i++) {
         //alert(want[i].toUpperCase() + " " + got.toUpperCase());
-        if (want[i].toUpperCase() === got.toUpperCase()) { yes++; }
+        if ((want[i].toLowerCase().replace(/ё/g, "е") === got.toLowerCase()) || (want[i].toLowerCase() === got.toLowerCase())) { yes++; }
     }
     if (yes != 0) { 
         newWord();
