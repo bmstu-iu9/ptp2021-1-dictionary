@@ -101,5 +101,7 @@ document.getElementById('inpt').value = "";
 var task = url.searchParams.get('task');
 var lang = url.searchParams.get('lang');
 var rb = document.querySelector('.checkAnswer');
-if (task == "translate") { rb.style.display = 'none'; }
-newWord();
+if (task == "translate") { 
+    rb.style.display = 'none';
+    newWord();
+}
