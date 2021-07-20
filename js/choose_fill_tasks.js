@@ -12,6 +12,7 @@ function choose_task() {
     }
     let pos_right = get_random(3);
     let answers = ["", "", "", ""];
+	let answers_ind = [ir];
     for (let i = 0; i < 4; i++) {
         if (i == pos_right) {
             if (lang1 == "eng") {
@@ -20,12 +21,21 @@ function choose_task() {
                 answers[i] = words[ir].word;
             }
         } else {
-            let x = get_random(words.length - 1);
+            let x = get_random(words.length - 1 - answers_ind.length);
+			for (let j = 0; j < answers_ind.length; j++) {
+                if (x >= answers_ind[j]) {
+                    x++;
+                }
+            }
             if (lang1 == "eng") {
                 answers[i] = words[x].translation;
             } else {
                 answers[i] = words[x].word;
             }
+			answers_ind.push(x);
+            answers_ind.sort(function (a, b) {
+                return a - b;
+            });
         }
     }
     let labels = document.querySelectorAll(".form-check-label");
@@ -76,11 +86,21 @@ function fill_task() {
     exercise.innerHTML = s;
     let pos_right = get_random(3);
     let answers = ["", "", "", ""];
+	let answers_ind = [ir];
     for (let i = 0; i < 4; i++) {
         if (i == pos_right) {
             answers[i] = word;
         } else {
-            let x = get_random(words.length - 1);
+            let x = get_random(words.length - 1 - answers_ind.length);
+			for (let j = 0; j < answers_ind.length; j++) {
+                if (x >= answers_ind[j]) {
+                    x++;
+                }
+            }
+            answers_ind.push(x);
+            answers_ind.sort(function (a, b) {
+                return a - b;
+            });
             answers[i] = words[x].word;
         }
     }
