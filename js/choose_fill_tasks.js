@@ -2,13 +2,17 @@ function get_random(max) {
     return Math.floor(Math.random() * (max + 1));
 }
 
+function write_exercise(exercise) {
+    let ex = document.getElementById("exercise");
+    ex.innerHTML = exercise[0].toUpperCase() +  exercise.slice(1);
+}
+
 function choose_task() {
     let ir = get_random(words.length - 1);
-    let exercise = document.getElementById("exercise");
     if (lang1 == "eng") {
-        exercise.innerHTML = words[ir].word[0].toUpperCase() +  words[ir].word.slice(1);
+		write_exercise(words[ir].word);
     } else {
-        exercise.innerHTML = words[ir].translation[0].toUpperCase() +  words[ir].translation.slice(1);
+		write_exercise(words[ir].translation);
     }
     let pos_right = get_random(3);
     let answers = ["", "", "", ""];
@@ -126,8 +130,7 @@ function fill_task() {
         }
     }
     word = word.join(" ");
-    let exercise = document.getElementById("exercise");
-    exercise.innerHTML = s;
+    write_exercise(s);
     let pos_right = get_random(3);
     let answers = ["", "", "", ""];
 	let answers_ind = [ir];
