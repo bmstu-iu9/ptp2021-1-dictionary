@@ -156,6 +156,7 @@ td:hover > a {
       width: 100%;
       padding: 5px;
       backface-visibility: hidden;
+      position: absolute;
       top: 0;
       left: 0;
     }
@@ -170,4 +171,8 @@ td:hover > a {
 .back {
   transform: rotateY(180deg);
   height: 100%;
+}
+
+#front-content, #back-content {
+  margin-top: 125px;
 }
