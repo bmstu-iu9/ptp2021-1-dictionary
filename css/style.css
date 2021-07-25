@@ -129,7 +129,7 @@ td:hover > a {
     position: fixed;
 }
 
-.card {
+.flip-card {
   text-align: center;
   color: black;
   width: 300px;
