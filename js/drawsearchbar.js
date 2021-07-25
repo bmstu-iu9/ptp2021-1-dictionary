@@ -11,6 +11,7 @@ function process()
     let div=document.createElement('div');
     div.innerHTML=resp.toString();
     document.body.prepend(div);
+    document.getElementById('content').style.display='';
   }
 }
 
