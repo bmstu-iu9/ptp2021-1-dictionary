@@ -49,6 +49,14 @@ function write_answers(answers) {
     }
 }
 
+function switch_off_radio_button() {
+    let radio_buttons = document.querySelectorAll(".form-check-input");
+    for (let i = 0; i < 4; i++) {
+        let radio_button = radio_buttons[i];
+        radio_button.checked = false;
+    }
+}
+
 function choose_task() {
     let ir = get_random(words.length - 1);
     if (lang1 == "ru") {
@@ -61,11 +69,8 @@ function choose_task() {
 	let answers_ind = a[1];
 	let answers = make_answers(answers_ind);
 	write_answers(answers);
+	switch_off_radio_button();
     let radio_buttons = document.querySelectorAll(".form-check-input");
-    for (let i = 0; i < 4; i++) {
-        let radio_button = radio_buttons[i];
-        radio_button.checked = false;
-    }
     for (let i = 0; i < 4; i++) {
         let radio_button = radio_buttons[i];
         radio_button.onclick = function () {
@@ -152,11 +157,8 @@ function fill_task() {
 	let answers = make_answers(answers_ind);
 	answers[pos_right] = word;
     write_answers(answers);
+	switch_off_radio_button();
     let radio_buttons = document.querySelectorAll(".form-check-input");
-    for (let i = 0; i < 4; i++) {
-        let radio_button = radio_buttons[i];
-        radio_button.checked = false;
-    }
     for (let i = 0; i < 4; i++) {
         let radio_button = radio_buttons[i];
         radio_button.onclick = function () {
