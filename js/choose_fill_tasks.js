@@ -1,3 +1,7 @@
+import articles from "../json/words.json" assert { type: "json" };
+
+let word_articles = articles.entries;
+
 function get_random(max) {
     return Math.floor(Math.random() * (max + 1));
 }
@@ -14,7 +18,7 @@ function make_answers_ind(ir) {
 	let indexes = [ir];
     for (let i = 0; i < 4; i++) {
         if (i != pos_right) {
-            let x = get_random(words.length - 1 - indexes.length);
+            let x = get_random(word_articles.length - 1 - indexes.length);
 			for (let j = 0; j < indexes.length; j++) {
                 if (x >= indexes[j]) {
                     x++;
@@ -34,9 +38,9 @@ function make_answers(answers_ind) {
     let answers = ["", "", "", ""];
     for (let i = 0; i < 4; i++) {
         if ((task1 == "choose") && (lang == "ru")) {
-            answers[i] = words[answers_ind[i]].translation;
+            answers[i] = word_articles[answers_ind[i]].translation;
         } else {
-            answers[i] = words[answers_ind[i]].word
+            answers[i] = word_articles[answers_ind[i]].word
         }
     }
     return answers;
@@ -142,16 +146,16 @@ function search_word_in_example(word, s) {
 }
 
 function choose_and_fill_tasks() {
-    let ir = get_random(words.length - 1);
-    let word = words[ir].word.trim();
+    let ir = get_random(word_articles.length - 1);
+    let word = word_articles[ir].word.trim();
     if (task1 == "choose") {
         if (lang1 == "ru") {
-            write_exercise(words[ir].word);
+            write_exercise(word_articles[ir].word);
         } else {
-            write_exercise(words[ir].translation);
+            write_exercise(word_articles[ir].translation);
         }
     } else {
-        let s = words[ir].examples[0].eng;
+        let s = word_articles[ir].examples[0].eng;
         let a = search_word_in_example(word, s);
         word = a[0];
         s = a[1];
