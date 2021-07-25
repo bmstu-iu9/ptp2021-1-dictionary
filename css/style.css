@@ -118,9 +118,11 @@ td:hover > a {
   border: 2px solid #4476fb;
   color: #4476fb;
 }
-.word-link {
+a.word-link {
   text-decoration: none;
   color: #4476fb;
+  display: inline;
+  text-align: left;
 }
 
 #mySuggestions{
