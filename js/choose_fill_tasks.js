@@ -65,11 +65,7 @@ function check_answer_on_click(pos_right, answers) {
             if (answers[i].trim().toLowerCase() != answers[pos_right].trim().toLowerCase()) {
                 alert("неверно, правильный ответ: " + answers[pos_right]);
             }
-            if (task1 == "choose") {
-				choose_task();
-			} else {
-				fill_task();
-			}
+            choose_and_fill_tasks();
         }
     }
 }
@@ -145,37 +141,31 @@ function search_word_in_example(word, s) {
     return [word, s];
 }
 
-function choose_task() {
-    let ir = get_random(words.length - 1);
-    if (lang1 == "ru") {
-		write_exercise(words[ir].word);
-    } else {
-		write_exercise(words[ir].translation);
-    }
-	let a = make_answers_ind(ir);
-	let pos_right = a[0];
-	let answers_ind = a[1];
-	let answers = make_answers(answers_ind);
-	write_answers(answers);
-	switch_off_radio_button();
-    check_answer_on_click(pos_right, answers);
-}
-
-function fill_task() {
+function choose_and_fill_tasks() {
     let ir = get_random(words.length - 1);
     let word = words[ir].word.trim();
-    let s = words[ir].examples[0].eng;
-	let a1 = search_word_in_example(word, s);
-	word = a1[0];
-	s = a1[1];
-    write_exercise(s);
-	let a = make_answers_ind(ir);
-	let pos_right = a[0];
-	let answers_ind = a[1];
-	let answers = make_answers(answers_ind);
-	answers[pos_right] = word;
+    if (task1 == "choose") {
+        if (lang1 == "ru") {
+            write_exercise(words[ir].word);
+        } else {
+            write_exercise(words[ir].translation);
+        }
+    } else {
+        let s = words[ir].examples[0].eng;
+        let a = search_word_in_example(word, s);
+        word = a[0];
+        s = a[1];
+        write_exercise(s);
+    }
+    let a1 = make_answers_ind(ir);
+    let pos_right = a1[0];
+    let answers_ind = a1[1];
+    let answers = make_answers(answers_ind);
+    if (task1 == "fill") {
+        answers[pos_right] = word;
+    }
     write_answers(answers);
-	switch_off_radio_button();
+    switch_off_radio_button();
     check_answer_on_click(pos_right, answers);
 }
 
@@ -184,10 +174,6 @@ let task1 = url1.searchParams.get("task");
 let lang1 = url1.searchParams.get("lang");
 let input = document.querySelector('.form');
 if ((task1 == "choose") || (task1 == "fill")) { 
-    input.style.display = "none"; 
-}
-if (task1 == "choose") {
-    choose_task();
-} else if (task1 == "fill") {
-    fill_task();
+    input.style.display = "none";
+    choose_and_fill_tasks();
 }
