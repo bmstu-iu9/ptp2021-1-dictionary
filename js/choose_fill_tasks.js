@@ -57,6 +57,23 @@ function switch_off_radio_button() {
     }
 }
 
+function check_answer_on_click(pos_right, answers) {
+    let radio_buttons = document.querySelectorAll(".form-check-input");
+    for (let i = 0; i < 4; i++) {
+        let radio_button = radio_buttons[i];
+        radio_button.onclick = function () {
+            if (answers[i].trim().toLowerCase() != answers[pos_right].trim().toLowerCase()) {
+                alert("неверно, правильный ответ: " + answers[pos_right]);
+            }
+            if (task1 == "choose") {
+				choose_task();
+			} else {
+				fill_task();
+			}
+        }
+    }
+}
+
 function choose_task() {
     let ir = get_random(words.length - 1);
     if (lang1 == "ru") {
@@ -70,16 +87,7 @@ function choose_task() {
 	let answers = make_answers(answers_ind);
 	write_answers(answers);
 	switch_off_radio_button();
-    let radio_buttons = document.querySelectorAll(".form-check-input");
-    for (let i = 0; i < 4; i++) {
-        let radio_button = radio_buttons[i];
-        radio_button.onclick = function () {
-            if (answers[i].trim().toLowerCase() != answers[pos_right].trim().toLowerCase()) {
-                alert("неверно, правильный ответ: " + answers[pos_right]);
-            }
-            choose_task();
-        }
-    }
+    check_answer_on_click(pos_right, answers);
 }
 
 function fill_task() {
@@ -158,16 +166,7 @@ function fill_task() {
 	answers[pos_right] = word;
     write_answers(answers);
 	switch_off_radio_button();
-    let radio_buttons = document.querySelectorAll(".form-check-input");
-    for (let i = 0; i < 4; i++) {
-        let radio_button = radio_buttons[i];
-        radio_button.onclick = function () {
-            if (answers[i].trim().toLowerCase() != answers[pos_right].trim().toLowerCase()) {
-                alert("неверно, правильный ответ: " + answers[pos_right]);
-            }
-            fill_task();
-        }
-    }
+    check_answer_on_click(pos_right, answers);
 }
 
 let url1 = new URL(document.location.href);
