@@ -7,45 +7,60 @@ function write_exercise(exercise) {
     ex.innerHTML = exercise[0].toUpperCase() +  exercise.slice(1);
 }
 
-function choose_task() {
-    let ir = get_random(words.length - 1);
-    if (lang1 == "eng") {
-		write_exercise(words[ir].word);
-    } else {
-		write_exercise(words[ir].translation);
-    }
+function make_answers_ind(ir) {
     let pos_right = get_random(3);
-    let answers = ["", "", "", ""];
-	let answers_ind = [ir];
+    let answers_ind = [0, 0, 0, 0];
+    answers_ind[pos_right] = ir;
+	let indexes = [ir];
     for (let i = 0; i < 4; i++) {
-        if (i == pos_right) {
-            if (lang1 == "eng") {
-                answers[i] = words[ir].translation;
-            } else {
-                answers[i] = words[ir].word;
-            }
-        } else {
-            let x = get_random(words.length - 1 - answers_ind.length);
-			for (let j = 0; j < answers_ind.length; j++) {
-                if (x >= answers_ind[j]) {
+        if (i != pos_right) {
+            let x = get_random(words.length - 1 - indexes.length);
+			for (let j = 0; j < indexes.length; j++) {
+                if (x >= indexes[j]) {
                     x++;
                 }
             }
-            if (lang1 == "eng") {
-                answers[i] = words[x].translation;
-            } else {
-                answers[i] = words[x].word;
-            }
-			answers_ind.push(x);
-            answers_ind.sort(function (a, b) {
+            answers_ind[i] = x;
+            indexes.push(x);
+            indexes.sort(function (a, b) {
                 return a - b;
             });
         }
     }
+    return [pos_right, answers_ind];
+}
+
+function make_answers(answers_ind) {
+    let answers = ["", "", "", ""];
+    for (let i = 0; i < 4; i++) {
+        if ((task1 == "choose") && (lang == "ru")) {
+            answers[i] = words[answers_ind[i]].translation;
+        } else {
+            answers[i] = words[answers_ind[i]].word
+        }
+    }
+    return answers;
+}
+
+function write_answers(answers) {
     let labels = document.querySelectorAll(".form-check-label");
     for (let i = 0; i < 4; i++) {
         labels[i].innerHTML = answers[i][0].toUpperCase() +  answers[i].slice(1);
     }
+}
+
+function choose_task() {
+    let ir = get_random(words.length - 1);
+    if (lang1 == "ru") {
+		write_exercise(words[ir].word);
+    } else {
+		write_exercise(words[ir].translation);
+    }
+	let a = make_answers_ind(ir);
+	let pos_right = a[0];
+	let answers_ind = a[1];
+	let answers = make_answers(answers_ind);
+	write_answers(answers);
     let radio_buttons = document.querySelectorAll(".form-check-input");
     for (let i = 0; i < 4; i++) {
         let radio_button = radio_buttons[i];
@@ -131,30 +146,12 @@ function fill_task() {
     }
     word = word.join(" ");
     write_exercise(s);
-    let pos_right = get_random(3);
-    let answers = ["", "", "", ""];
-	let answers_ind = [ir];
-    for (let i = 0; i < 4; i++) {
-        if (i == pos_right) {
-            answers[i] = word;
-        } else {
-            let x = get_random(words.length - 1 - answers_ind.length);
-			for (let j = 0; j < answers_ind.length; j++) {
-                if (x >= answers_ind[j]) {
-                    x++;
-                }
-            }
-            answers_ind.push(x);
-            answers_ind.sort(function (a, b) {
-                return a - b;
-            });
-            answers[i] = words[x].word;
-        }
-    }
-    let labels = document.querySelectorAll(".form-check-label");
-    for (let i = 0; i < 4; i++) {
-        labels[i].innerHTML = answers[i][0].toUpperCase() +  answers[i].slice(1);
-    }
+	let a = make_answers_ind(ir);
+	let pos_right = a[0];
+	let answers_ind = a[1];
+	let answers = make_answers(answers_ind);
+	answers[pos_right] = word;
+    write_answers(answers);
     let radio_buttons = document.querySelectorAll(".form-check-input");
     for (let i = 0; i < 4; i++) {
         let radio_button = radio_buttons[i];
