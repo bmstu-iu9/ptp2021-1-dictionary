@@ -149,7 +149,7 @@ a.word-link {
   perspective: 1000px;
 }
 
-.flipper.flip .card {
+.flipper.flip .flip-card {
   transform: rotateY(180deg);
 }
 
