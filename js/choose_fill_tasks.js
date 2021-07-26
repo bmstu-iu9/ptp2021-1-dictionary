@@ -37,7 +37,7 @@ function make_answers_ind(ir) {
 function make_answers(answers_ind) {
     let answers = ["", "", "", ""];
     for (let i = 0; i < 4; i++) {
-        if ((task1 == "choose") && (lang == "ru")) {
+        if ((task1 == "choose") && (lang1 == "ru")) {
             answers[i] = word_articles[answers_ind[i]].translation;
         } else {
             answers[i] = word_articles[answers_ind[i]].word
