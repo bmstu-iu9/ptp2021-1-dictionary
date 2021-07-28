@@ -23,18 +23,23 @@ type Example struct {
 	Ru  string `json:"ru"`
 }
 
-func 
-
-func main() {
-	wordsFilePtr := flag.String("jsonpath", "../json/words.json", "Path to file with words")
-	audioFolderPtr := flag.String("audiopath", "./", "Path to store audio files")
-	flag.Parse()
-
-	wordsFileJson, err := os.Open(*wordsFilePtr)
+func getWordsFromJson(jsonPath *string, wordsChannel chan string) {
+	wordsFileJson, err := os.Open(*jsonPath)
 
 	if err != nil {
 		fmt.Println("Invalid path to a file")
 	}
 
 	wordsFileJson.Close()
+}
+
+func getAudioFromJson(jsonPath *string, audioPath *string) {
+	wordsChannel := make(chan string)
+	go getWordsFromJson(jsonPath, wordsChannel)
+}
+
+func main() {
+	wordsFilePtr := flag.String("jsonpath", "../json/words.json", "Path to file with words")
+	audioFolderPtr := flag.String("audiopath", "./", "Path to store audio files")
+	flag.Parse()
 }
