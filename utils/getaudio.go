@@ -23,8 +23,11 @@ type Example struct {
 	Ru  string `json:"ru"`
 }
 
+func 
+
 func main() {
-	wordsFilePtr := flag.String("path", "../json/words.json", "Path to file with words")
+	wordsFilePtr := flag.String("jsonpath", "../json/words.json", "Path to file with words")
+	audioFolderPtr := flag.String("audiopath", "./", "Path to store audio files")
 	flag.Parse()
 
 	wordsFileJson, err := os.Open(*wordsFilePtr)
