@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"net/http"
 	"os"
 )
 
@@ -25,7 +26,11 @@ type Example struct {
 	Ru  string `json:"ru"`
 }
 
-func getWordsFromJson(jsonPath *string, wordsChannel chan string) {
+func sendGetRequest(word *string) {
+	http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/hello?q=hello")
+}
+
+func getWordsFromJson(jsonPath *string) {
 	wordsFileJson, err := os.Open(*jsonPath)
 
 	if err != nil {
@@ -38,15 +43,14 @@ func getWordsFromJson(jsonPath *string, wordsChannel chan string) {
 	json.Unmarshal(byteValue, &entries)
 
 	for i := 0; i < len(entries.Entries); i++ {
-		wordsChannel <- entries.Entries[i].Word
+		fmt.Println(entries.Entries[i].Word)
 	}
 
 	wordsFileJson.Close()
 }
 
 func getAudioFromJson(jsonPath *string, audioPath *string) {
-	wordsChannel := make(chan string)
-	go getWordsFromJson(jsonPath, wordsChannel)
+	go getWordsFromJson(jsonPath)
 }
 
 func main() {
