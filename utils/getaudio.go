@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
 )
 
@@ -30,6 +32,15 @@ func getWordsFromJson(jsonPath *string, wordsChannel chan string) {
 		fmt.Println("Invalid path to a file")
 	}
 
+	byteValue, _ := ioutil.ReadAll(wordsFileJson)
+
+	var entries Entries
+	json.Unmarshal(byteValue, &entries)
+
+	for i := 0; i < len(entries.Entries); i++ {
+		wordsChannel <- entries.Entries[i].Word
+	}
+
 	wordsFileJson.Close()
 }
 
@@ -41,5 +52,8 @@ func getAudioFromJson(jsonPath *string, audioPath *string) {
 func main() {
 	wordsFilePtr := flag.String("jsonpath", "../json/words.json", "Path to file with words")
 	audioFolderPtr := flag.String("audiopath", "./", "Path to store audio files")
+
 	flag.Parse()
+
+	getAudioFromJson(wordsFilePtr, audioFolderPtr)
 }
