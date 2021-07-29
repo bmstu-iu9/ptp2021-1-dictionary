@@ -5,8 +5,12 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
+	"strings"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 type Entries struct {
@@ -27,7 +31,29 @@ type Example struct {
 }
 
 func sendGetRequest(word *string) {
-	http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/hello?q=hello")
+	*word = strings.Trim(*word, " ")
+	splittedWord := strings.Split(*word, " ")
+
+	re, err := http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/" + *word + "?q=" + *word)
+	//re, err := http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/application?q=application")
+	if err != nil {
+		log.Panic(err)
+	}
+
+	defer re.Body.Close()
+	if re.StatusCode != 200 {
+		log.Println("bad status code")
+		log.Println(re.StatusCode)
+	}
+
+	doc, err := goquery.NewDocumentFromReader(re.Body)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	audioUrl, _ := doc.Find(".sound").First().Attr("data-src-mp3")
+	fmt.Print(audioUrl)
 }
 
 func getWordsFromJson(jsonPath *string) {
@@ -43,17 +69,25 @@ func getWordsFromJson(jsonPath *string) {
 	json.Unmarshal(byteValue, &entries)
 
 	for i := 0; i < len(entries.Entries); i++ {
-		fmt.Println(entries.Entries[i].Word)
+		fmt.Print(entries.Entries[i].Word + " ")
+		sendGetRequest(&entries.Entries[i].Word)
+		fmt.Println()
 	}
 
 	wordsFileJson.Close()
 }
 
 func getAudioFromJson(jsonPath *string, audioPath *string) {
-	go getWordsFromJson(jsonPath)
+	getWordsFromJson(jsonPath)
 }
 
 func main() {
+	logFile, err := os.OpenFile("./main.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		log.Fatal("There is no log file")
+	}
+	log.SetOutput(logFile)
+
 	wordsFilePtr := flag.String("jsonpath", "../json/words.json", "Path to file with words")
 	audioFolderPtr := flag.String("audiopath", "./", "Path to store audio files")
 
