@@ -30,33 +30,50 @@ type Example struct {
 	Ru  string `json:"ru"`
 }
 
-func sendGetRequest(word *string) {
+func prepareWordForRequest(word *string) (string, string) {
 	*word = strings.Trim(*word, " ")
+	*word = strings.ToLower(*word)
 	splittedWord := strings.Split(*word, " ")
 
-	re, err := http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/" + *word + "?q=" + *word)
-	//re, err := http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/application?q=application")
+	if len(splittedWord) > 1 {
+		return strings.Join(splittedWord[:], "-"), strings.Join(splittedWord[:], "+")
+	}
+	return *word, *word
+}
+
+// https://www.oxfordlearnersdictionaries.com/definition/english/word?q=word
+// https://www.oxfordlearnersdictionaries.com/definition/english/splitted-word?q=splitted+word
+
+func sendGetRequestOxfordDictionary(word *string) {
+	pathVariable, queryVariable := prepareWordForRequest(word)
+
+	fmt.Println(pathVariable + "  " + queryVariable)
+	re, err := http.Get("https://www.oxfordlearnersdictionaries.com/definition/english/" + pathVariable + "?q=" + queryVariable)
+
 	if err != nil {
 		log.Panic(err)
 	}
 
 	defer re.Body.Close()
+
 	if re.StatusCode != 200 {
 		log.Println("bad status code")
 		log.Println(re.StatusCode)
+		log.Println(*word)
+		// try to bruteforce
+	} else {
+		doc, err := goquery.NewDocumentFromReader(re.Body)
+
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		audioUrl, _ := doc.Find(".sound").First().Attr("data-src-mp3")
+		fmt.Println(audioUrl)
 	}
-
-	doc, err := goquery.NewDocumentFromReader(re.Body)
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	audioUrl, _ := doc.Find(".sound").First().Attr("data-src-mp3")
-	fmt.Print(audioUrl)
 }
 
-func getWordsFromJson(jsonPath *string) {
+func getAudioFromJson(jsonPath *string, audioFolderPath *string) {
 	wordsFileJson, err := os.Open(*jsonPath)
 
 	if err != nil {
@@ -69,16 +86,12 @@ func getWordsFromJson(jsonPath *string) {
 	json.Unmarshal(byteValue, &entries)
 
 	for i := 0; i < len(entries.Entries); i++ {
-		fmt.Print(entries.Entries[i].Word + " ")
-		sendGetRequest(&entries.Entries[i].Word)
-		fmt.Println()
+		if entries.Entries[i].Pos != "phr" {
+			sendGetRequestOxfordDictionary(&entries.Entries[i].Word)
+		}
 	}
 
 	wordsFileJson.Close()
-}
-
-func getAudioFromJson(jsonPath *string, audioPath *string) {
-	getWordsFromJson(jsonPath)
 }
 
 func main() {
