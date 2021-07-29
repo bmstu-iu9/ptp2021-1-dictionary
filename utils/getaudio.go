@@ -62,7 +62,7 @@ func prepareWordForRequest(word *string) (string, string) {
 // https://www.oxfordlearnersdictionaries.com/definition/english/word?q=word
 // https://www.oxfordlearnersdictionaries.com/definition/english/splitted-word?q=splitted+word
 
-func sendGetRequestOxfordDictionary(word *string) {
+func sendGetRequestOxfordDictionary(word *string, audioFolderPtr *string) {
 	pathVariable, queryVariable := prepareWordForRequest(word)
 
 	fmt.Println(pathVariable + "  " + queryVariable)
@@ -87,7 +87,11 @@ func sendGetRequestOxfordDictionary(word *string) {
 		}
 
 		audioUrl, _ := doc.Find(".sound").First().Attr("data-src-mp3")
-		fmt.Println(audioUrl)
+		log.Println("downloaded " + audioUrl)
+		downloadErr := downloadFile(*audioFolderPtr+"/"+*word+".mp3", audioUrl)
+		if downloadErr != nil {
+			log.Println(downloadErr)
+		}
 	}
 }
 
@@ -105,7 +109,7 @@ func getAudioFromJson(jsonPath *string, audioFolderPath *string) {
 
 	for i := 0; i < len(entries.Entries); i++ {
 		if entries.Entries[i].Pos != "phr" {
-			sendGetRequestOxfordDictionary(&entries.Entries[i].Word)
+			sendGetRequestOxfordDictionary(&entries.Entries[i].Word, audioFolderPath)
 		}
 	}
 
@@ -120,9 +124,15 @@ func main() {
 	log.SetOutput(logFile)
 
 	wordsFilePtr := flag.String("jsonpath", "../json/words.json", "Path to file with words")
-	audioFolderPtr := flag.String("audiopath", "./", "Path to store audio files")
+	audioFolderPtr := flag.String("audiopath", "./audio", "Path to store audio files")
 
 	flag.Parse()
 
-	getAudioFromJson(wordsFilePtr, audioFolderPtr)
+	if _, pathErr := os.Stat(*audioFolderPtr); os.IsNotExist(pathErr) {
+		pathErr := os.Mkdir(*audioFolderPtr, 0770)
+		if pathErr != nil {
+			log.Panicln("Can't create folder for audio")
+		}
+		getAudioFromJson(wordsFilePtr, audioFolderPtr)
+	}
 }
