@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -28,6 +29,23 @@ type Entry struct {
 type Example struct {
 	Eng string `json:"eng"`
 	Ru  string `json:"ru"`
+}
+
+func downloadFile(filePath string, fileUrl string) error {
+	resp, err := http.Get(fileUrl)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	out, err := os.Create(filePath)
+	if err != nil {
+		return err
+	}
+	defer out.Close()
+
+	_, err = io.Copy(out, resp.Body)
+	return err
 }
 
 func prepareWordForRequest(word *string) (string, string) {
