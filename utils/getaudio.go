@@ -98,19 +98,12 @@ func processExceptionalCases(re **http.Response,
 	type1 := doc1.Find(".pos").First().Text()
 	type2 := doc2.Find(".pos").First().Text()
 
-	if *pos == "n" {
-		if type1 == "noun" {
-			*re, err = http.Get(*mainUrl + *pathVariable + "_1?q=" + *queryVariable)
-		} else if type2 == "noun" {
-			*re, err = http.Get(*mainUrl + *pathVariable + "_2?q=" + *queryVariable)
-		}
-	} else if *pos == "v" {
-		if type1 == "verb" {
-			*re, err = http.Get(*mainUrl + *pathVariable + "_1?q=" + *queryVariable)
-		} else if type2 == "verb" {
-			*re, err = http.Get(*mainUrl + *pathVariable + "_2?q=" + *queryVariable)
-		}
+	if *pos == string(type1[0]) {
+		*re, err = http.Get(*mainUrl + *pathVariable + "_1?q=" + *queryVariable)
+	} else if *pos == string(type2[0]) {
+		*re, err = http.Get(*mainUrl + *pathVariable + "_2?q=" + *queryVariable)
 	}
+
 	return err
 }
 
