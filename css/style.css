@@ -129,6 +129,7 @@ a.word-link {
   border-radius: 10px;
    background-color: #fff; 
     position: absolute;
+  z-index: 1;
 }
 
 .flip-card {
