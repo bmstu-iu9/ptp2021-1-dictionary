@@ -128,7 +128,7 @@ a.word-link {
 #mySuggestions{
   border-radius: 10px;
    background-color: #fff; 
-    position: fixed;
+    position: absolute;
 }
 
 .flip-card {
