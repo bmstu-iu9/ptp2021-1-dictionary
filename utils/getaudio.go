@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 
@@ -48,9 +49,36 @@ func downloadFile(filePath string, fileUrl string) error {
 	return err
 }
 
+func downloadTtsIfNotExists(fileName string, text string) error {
+	f, err := os.Open(fileName)
+	if err != nil {
+		url := fmt.Sprintf("http://translate.google.com/translate_tts?ie=UTF-8&total=1&idx=0&textlen=32&client=tw-ob&q=%s&tl=%s", url.QueryEscape(text), "en")
+		response, err := http.Get(url)
+		if err != nil {
+			return err
+		}
+		defer response.Body.Close()
+
+		output, err := os.Create(fileName)
+		if err != nil {
+			return err
+		}
+
+		_, err = io.Copy(output, response.Body)
+		return err
+	}
+
+	f.Close()
+	return nil
+}
+
+func prepareWord(word *string) string {
+	prepared := strings.Trim(*word, " ")
+	return strings.ToLower(prepared)
+}
+
 func prepareWordForRequest(word *string) (string, string) {
-	*word = strings.Trim(*word, " ")
-	*word = strings.ToLower(*word)
+	*word = prepareWord(word)
 	splittedWord := strings.Split(*word, " ")
 
 	if len(splittedWord) > 1 {
@@ -128,9 +156,9 @@ func sendGetRequestOxfordDictionary(word *string, pos *string, audioFolderPtr *s
 	if downloadErr != nil {
 		log.Printf("Cannot download word %s: %e\n", *word, downloadErr)
 		if re.StatusCode == 404 {
-			log.Println("There is no such word in dictionary")
+			log.Println("There is no such word in dictionary. Using TTS")
 		}
-		log.Println(audioUrl)
+		downloadTtsIfNotExists(*audioFolderPtr+"/"+*word+".mp3", *word)
 	} else {
 		log.Println("downloaded " + audioUrl)
 	}
@@ -151,6 +179,9 @@ func getAudioFromJson(jsonPath *string, audioFolderPath *string) {
 	for i := 0; i < len(entries.Entries); i++ {
 		if entries.Entries[i].Pos != "phr" {
 			sendGetRequestOxfordDictionary(&entries.Entries[i].Word, &entries.Entries[i].Pos, audioFolderPath)
+		} else {
+			currentWord := prepareWord(&entries.Entries[i].Word)
+			downloadTtsIfNotExists(*audioFolderPath+"/"+currentWord+".mp3", currentWord)
 		}
 	}
 
