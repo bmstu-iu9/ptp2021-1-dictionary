@@ -130,6 +130,7 @@ a.word-link {
    background-color: #fff; 
     position: absolute;
   z-index: 1;
+  min-width: 226.5px;
 }
 
 .flip-card {
