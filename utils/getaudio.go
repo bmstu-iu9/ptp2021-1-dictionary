@@ -59,51 +59,37 @@ func prepareWordForRequest(word *string) (string, string) {
 	return *word, *word
 }
 
+func processCase(mainUrl *string, pathVariable *string, queryVariable *string, suffix string) string {
+	re, err := http.Get(*mainUrl + *pathVariable + suffix + "?q=" + *queryVariable)
+	if err != nil {
+		log.Println(re.StatusCode)
+	}
+
+	defer re.Body.Close()
+
+	doc, docErr := goquery.NewDocumentFromReader(re.Body)
+	if docErr != nil {
+		log.Fatal(docErr)
+	}
+
+	return doc.Find(".pos").First().Text()
+}
+
 func processExceptionalCases(re **http.Response,
 	mainUrl *string, pathVariable *string,
 	queryVariable *string, pos *string) error {
 
-	reType1, err1 := http.Get(*mainUrl + *pathVariable + "_1?q=" + *queryVariable)
+	type1 := processCase(mainUrl, pathVariable, queryVariable, "_1")
+	type2 := processCase(mainUrl, pathVariable, queryVariable, "_2")
+	var err error
 
-	if err1 != nil {
-		log.Println("bad request")
-		log.Println(reType1.StatusCode)
+	if len(type1) > 0 && len(type2) > 0 {
+		if *pos == string(type1[0]) {
+			*re, err = http.Get(*mainUrl + *pathVariable + "_1?q=" + *queryVariable)
+		} else if *pos == string(type2[0]) {
+			*re, err = http.Get(*mainUrl + *pathVariable + "_2?q=" + *queryVariable)
+		}
 	}
-
-	defer reType1.Body.Close()
-
-	reType2, err2 := http.Get(*mainUrl + *pathVariable + "_2?q=" + *queryVariable)
-
-	if err2 != nil {
-		log.Println("bad request")
-		log.Println(reType2.StatusCode)
-	}
-
-	if err1 != nil && err2 != nil {
-		log.Println("No such word in oxfordlearnersdictionaries")
-	}
-
-	defer reType2.Body.Close()
-
-	doc1, err := goquery.NewDocumentFromReader(reType1.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	doc2, err := goquery.NewDocumentFromReader(reType2.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	type1 := doc1.Find(".pos").First().Text()
-	type2 := doc2.Find(".pos").First().Text()
-
-	if *pos == string(type1[0]) {
-		*re, err = http.Get(*mainUrl + *pathVariable + "_1?q=" + *queryVariable)
-	} else if *pos == string(type2[0]) {
-		*re, err = http.Get(*mainUrl + *pathVariable + "_2?q=" + *queryVariable)
-	}
-
 	return err
 }
 
