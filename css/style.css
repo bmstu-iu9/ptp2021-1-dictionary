@@ -17,7 +17,9 @@ body {
   border-radius: 15px;
   color: #4476fb;
   padding: 3%;
+  width: 60%;
 }
+
 #exercise{
   font-family: "Times New Roman", Georgia, Serif;
   font-size:120%;
