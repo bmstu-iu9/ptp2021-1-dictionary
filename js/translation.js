@@ -74,14 +74,14 @@ function checkAnswer(want) {
 }
 
 function newWord() {
-    var rand = Math.floor(Math.random() * words.length);
+    var rand = Math.floor(Math.random() * inwords.length);
     var word, trans;
     if (lang == "eng") {
-        word = trim(words[rand].word) + " (" + trim(words[rand].pos) + ")";
-        trans = trim(words[rand].translation);
+        word = trim(inwords[rand].word) + " (" + trim(inwords[rand].pos) + ")";
+        trans = trim(inwords[rand].translation);
     } else {
-        word = trim(words[rand].translation);
-        trans = trim(words[rand].word);
+        word = trim(inwords[rand].translation);
+        trans = trim(inwords[rand].word);
     }
     //alert(word);
     document.getElementById("exercise").textContent = word;
@@ -96,10 +96,29 @@ function newWord() {
     });
 }
 
+function filter(str) {
+    var acceptable = [12];
+    for (var i = 0 ; i < str.length ; i++) {
+        acceptable[str.charCodeAt(i) - 97] = 1;
+    }
+    for (var i = 0 ; i < words.length ; i++) {
+        //alert(words[i].module - 1);
+        //alert(acceptable[words[i].module - 1]);
+        //alert(acceptable[words[i].module - 1] == 1);
+        if (acceptable[words[i].module - 1] == 1) {
+            inwords.push(words[i]);
+        }
+    }
+}
+
 var url = new URL(document.location.href);
 document.getElementById('inpt').value = "";
 var task = url.searchParams.get('task');
 var lang = url.searchParams.get('lang');
+var mod = url.searchParams.get('mods');
+var inwords = [];
+filter(mod);
+//alert(inwords);
 var rb = document.querySelector('.checkAnswer');
 if (task == "translate") { 
     rb.style.display = 'none';

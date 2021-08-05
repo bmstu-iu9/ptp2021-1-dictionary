@@ -182,3 +182,19 @@ a.word-link {
 #front-content, #back-content {
   margin-top: 125px;
 }
+
+.btnfilter {
+  color: black;
+  background-color:aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  min-width: 125px;
+}
+
+.filter {
+  background-color: #faf7f0;
+  border: 2px solid #4476fb;
+  color: #4476fb;
+}
