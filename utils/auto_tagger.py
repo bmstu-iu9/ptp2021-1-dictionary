@@ -28,8 +28,17 @@ NLTK_WORDNET_TAGS = {
 ##n  
 ##n v
 
-def my_ngramms():
-    pass
+def my_ngramm(string, n):
+    string = nltk.word_tokenize(string)
+    ngrammed_sentence = []
+    ngramm = ''
+    while len(string) >= n:
+        for i in range(n):
+            ngramm = ngramm + string[i] + ' '
+        ngrammed_sentence += [ngramm.rstrip()]
+        ngramm = ''
+        del string[0]
+    return ngrammed_sentence
 
 
 def get_json_obj(filename):
@@ -75,6 +84,10 @@ def parse_entry(entry, file):
     else:
         file.write( f"ERROR: Word \"{entry['word']}\" not found\nin {' '.join(eng)}.\n" )
         err_eng+=1
+        for c in logs:
+            file.write(c)
+            file.write('\n')
+        logs = []
     for word in ru:
         for parse in morph.parse(word):
             if parse.normal_form in ru_word_normalized:
