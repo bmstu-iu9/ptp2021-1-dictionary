@@ -1,7 +1,7 @@
 
 body {
   background-color: #c6d8ec;
-  padding: 2.5%;
+  padding-top:100px;
 }
 
 .dict_btn{
@@ -43,20 +43,20 @@ body {
     z-index: 10;
 }
 
-.nav-link {
+/*.nav-link {
     background-color: #689CD3;
     color: #4476fb;
     border-color:#4476fb;
-}
+}*/
 
 .my-footer {
     background-color: #faf7f0;
 
 }
 
-.nav-text {
+/*.nav-text {
     color: #4476fb;
-}
+}*/
 
 table { 
   background-color:antiquewhite;
