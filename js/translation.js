@@ -58,7 +58,7 @@ function correct(want) {
 }
 
 function checkAnswer(want) {
-    var got = trim(document.getElementById('inpt').value);
+    var got = document.getElementById('inpt').value;
     var yes = 0;
     for (var i = 0 ; i < want.length ; i++) {
         //alert(want[i].toUpperCase() + " " + got.toUpperCase());
