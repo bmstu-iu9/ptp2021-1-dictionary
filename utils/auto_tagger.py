@@ -41,9 +41,11 @@ def get_json_obj(filename):
 
 
 def deal_with_brackets(translations):
-    for t in translations[:]:
-        if '(' in t:
-            translations+=[t.replace('(', '').replace(')', '')]
+    for i in range(len(translations)):
+        current = translations[i]
+        if '(' in current:
+            translations[i] = re.sub(r'\([^()]*\)', '', current)
+            translations+=[current.replace('(', '').replace(')', '')]
     return translations
         
 
