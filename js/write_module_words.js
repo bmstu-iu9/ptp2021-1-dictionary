@@ -15,7 +15,4 @@ function write_module_words(n) {
     }
 }
 
-let params = (new URL(document.location)).searchParams;
-let index = parseInt(params.get('module'));
-
-write_module_words(index);
+write_module_words(11);

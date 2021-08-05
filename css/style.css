@@ -1,7 +1,7 @@
 
 body {
   background-color: #c6d8ec;
-  padding-top:100px;
+  padding: 2.5%;
 }
 
 .dict_btn{
@@ -17,9 +17,7 @@ body {
   border-radius: 15px;
   color: #4476fb;
   padding: 3%;
-  width: 80%;
 }
-
 #exercise{
   font-family: "Times New Roman", Georgia, Serif;
   font-size:120%;
@@ -45,20 +43,20 @@ body {
     z-index: 10;
 }
 
-/*.nav-link {
+.nav-link {
     background-color: #689CD3;
     color: #4476fb;
     border-color:#4476fb;
-}*/
+}
 
 .my-footer {
     background-color: #faf7f0;
 
 }
 
-/*.nav-text {
+.nav-text {
     color: #4476fb;
-}*/
+}
 
 table { 
   background-color:antiquewhite;
@@ -120,65 +118,13 @@ td:hover > a {
   border: 2px solid #4476fb;
   color: #4476fb;
 }
-a.word-link {
+.word-link {
   text-decoration: none;
   color: #4476fb;
-  display: inline;
-  text-align: left;
 }
 
 #mySuggestions{
   border-radius: 10px;
    background-color: #fff; 
-    position: absolute;
-  z-index: 1;
-  min-width: 226.5px;
-}
-
-.flip-card {
-  text-align: center;
-  color: black;
-  width: 300px;
-  height: 300px;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  background-color: #fff;
-}
-
-.flipper {
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-bottom: 10px;
-  perspective: 1000px;
-}
-
-.flipper.flip .flip-card {
-  transform: rotateY(180deg);
-}
-
-.front,
-    .back {
-      width: 100%;
-      padding: 5px;
-      backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
- /* front pane, placed above back */
- .front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-  height: 100%;
-}
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-  height: 100%;
-}
-
-#front-content, #back-content {
-  margin-top: 125px;
+    position: fixed;
 }
