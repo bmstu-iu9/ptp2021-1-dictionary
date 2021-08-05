@@ -1,7 +1,7 @@
 
 body {
   background-color: #c6d8ec;
-  padding: 2.5%;
+  padding-top:100px;
 }
 
 .dict_btn{
@@ -17,7 +17,9 @@ body {
   border-radius: 15px;
   color: #4476fb;
   padding: 3%;
+  width: 80%;
 }
+
 #exercise{
   font-family: "Times New Roman", Georgia, Serif;
   font-size:120%;
@@ -43,20 +45,20 @@ body {
     z-index: 10;
 }
 
-.nav-link {
+/*.nav-link {
     background-color: #689CD3;
     color: #4476fb;
     border-color:#4476fb;
-}
+}*/
 
 .my-footer {
     background-color: #faf7f0;
 
 }
 
-.nav-text {
+/*.nav-text {
     color: #4476fb;
-}
+}*/
 
 table { 
   background-color:antiquewhite;
@@ -128,7 +130,9 @@ a.word-link {
 #mySuggestions{
   border-radius: 10px;
    background-color: #fff; 
-    position: fixed;
+    position: absolute;
+  z-index: 1;
+  min-width: 226.5px;
 }
 
 .flip-card {
