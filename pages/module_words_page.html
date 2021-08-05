@@ -11,39 +11,15 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light my-nav">
-            <div class="container-fluid mt-2 mb-2">
-                <a class="navbar-brand" style="color: #fff;" href="#">name</a>
-
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav nav-text">
-                        <a class="nav-link" style="color: #fff;" href="#">link1</a>
-                        <a class="nav-link" style="color: #fff;" href="#">link2</a>
-                        <a class="nav-link" style="color: #fff;" href="#">link3</a>
-                        <a class="nav-link" style="color: #fff;" href="#">link4</a>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-    </div>
+    <div id="content" style="display: none;">
+    <script src="../js/drawsearchbar.js"></script>
     <div class="card card-style mt-2">
         <div class="card-header text-center">
         </div>
         <div class="card-body">
         </div>
     </div>
-    <footer class="text-center text-lg-start  mt-5 my-footer">
+    <footer class="text-center text-lg-start mt-5 my-footer fixed-bottom">
         <div class="text-center p-4"> Copyright
         </div>
     </footer>
@@ -52,6 +28,8 @@
         crossorigin="anonymous"></script>
     <script src="../js/words.js"></script>
     <script src="../js/write_module_words.js"></script>
+	<script type="module" src="../js/searchBarScript.js"></script>
+    </div>
 </body>
 
 </html>
