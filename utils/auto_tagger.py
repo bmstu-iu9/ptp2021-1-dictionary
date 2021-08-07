@@ -8,6 +8,7 @@ import re
 from pprint import pprint
 from string import punctuation
 import json
+import time
 
 
 print('создание необходимых компонентов...')
@@ -16,12 +17,7 @@ morph = pm.MorphAnalyzer()
 print('загрузка успешно завершена!\n---------------------------\n\n')
 
 
-NLTK_WORDNET_POS_TAGS = (
-    wordnet.NOUN,
-    wordnet.VERB,
-    wordnet.ADJ,
-    wordnet.ADV
-    )
+
 
 
 
@@ -38,10 +34,7 @@ class String:
     def __init__(self, content, language):
         self.content = content
         self.language = language
-        if self.language == 'eng':
-            self.parse_func = 'lemmatizer.lemmatize(SELF, POS)'
-        elif self.language == 'ru':
-            self.parse_func = 'morph.parse(SELF)'
+        
 
     def __repr__(self):
         return f'String "{self.content}", language = "{self.language}", {self.parse_functions}'
@@ -51,8 +44,9 @@ class String:
         #если скобок нет, возвращает None
         if '(' in self.content:
             newString = String(re.sub(r'\([^()]*\)', '', self.content), self.language) 
-            self.content = [current.replace('(', '').replace(')', '')]
-        return newString 
+            self.content = [self.content.replace('(', '').replace(')', '')]
+            return newString
+        return None
 
     def change_similar_letters(self):
         #меняет английские буквы в строке на похожие русские в зависимости от выбранного языка
@@ -67,26 +61,6 @@ class String:
         self.content = string
 
     
-        
-
-    
-class Sentence(String):
-    def __init__(self, content, language):
-        String.__init__(self, content, language)
-
-    def nsplit(self, n = 1):
-        #дробит строку на n-граммы
-        content = nltk.word_tokenize(string)
-        ngrammed = []
-        ngramm = ''
-        while len(content) >= n:
-            for i in range(n):
-                ngramm = ngramm + string[i] + ' '
-            ngrammed_sentence += [ngramm]
-            ngramm = ''
-            del content[0]
-        self.content = list(map(lambda c: c.lstrip().rstrip().lower(), content))
-
 
 
 
@@ -95,21 +69,64 @@ class Word(String):
     def __init__(self, content, language):
         String.__init__(self, content, language)
         self.length = 1
+        
 
     def __repr__(self):
         return f'Word "{self.content}", language = "{self.language}"'
 
+    def get_normal_forms(self):
+        self.change_similar_letters()
+        if self.language == 'eng':
+            parse_func = tuple([lemmatizer.lemmatize(self.content, pos) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)])
+        elif self.language == 'ru':
+            parse_func = tuple([c.normal_form for c in morph.parse(self.content)])
+        return parse_func
 
 
 
-class Phrase(String):
+
+class Phrase(Word):
 
     def __init__(self, content, language, length):
-        String.__init__(self, content, language)
+        Word.__init__(self, content, language)
         self.length = length
         
     def __repr__(self):
         return f'Phrase "{self.content}", language = "{self.language}"'
+
+
+
+class Sentence(String):
+
+    def __init__(self, content, language):
+        String.__init__(self, content, language)
+        self.status = 'common'
+
+    def nsplit(self, n = 1):
+        #дробит строку на n-граммы
+        if self.status == 'common': 
+            content = nltk.word_tokenize(self.content)
+            ngrammed_sentence = []
+            ngramm = ''
+            while len(content) >= n:
+                for i in range(n):
+                    ngramm = ngramm + content[i] + ' '
+                ngrammed_sentence += [ngramm]
+                ngramm = ''
+                del content[0]
+            ngrammed_sentence = list(map(lambda c: c.lstrip().rstrip().lower(), ngrammed_sentence))
+            self.content = tuple([Word(c, self.language) if n == 1 else Phrase(c, self.language, n) for c in ngrammed_sentence])
+            self.status = 'ngrammed'
+
+    def njoin(self):
+        pass
+
+
+
+
+
+
+
 
     
 
@@ -121,40 +138,43 @@ def phrase_check(string):
 
 
 
-def parse(word, sentence, file):
-    if word.language == 'eng':
-        global NLTK_WORDNET_POS_TAGS
-    logs = []
-    sentence.nsplit(word.length)
-    pass
-
-
-
-
-def parse_entry_eng(entry, file):
+def parse_sentence(word, sentence, file):
     global NLTK_WORDNET_POS_TAGS
     logs = []
-    eng = [format_str(word, 'eng') for word in nltk.word_tokenize(entry['examples'][0]['eng'])]    
-    eng_word_normalized = lemmatizer.lemmatize(format_str(entry['word'], 'eng').lstrip().rstrip().lower(), entry['pos'].rstrip()[0])
-    for word in eng:
-        logs += [f'-----   {repr(lemmatizer.lemmatize(word))}, {repr(eng_word_normalized)}, {lemmatizer.lemmatize(word) == eng_word_normalized}   -----']
-        for tag in NLTK_WORDNET_POS_TAGS:
-            if lemmatizer.lemmatize(word, tag) == eng_word_normalized:
-                file.write(f"Word \"{word}\" found\nin \"{' '.join(eng)}\"\nin {eng.index(word)+1} position.\n")
-                return 0
-    else:
-        file.write( f"ERROR: Word \"{entry['word']}\" not found\nin {' '.join(eng)}.\n" )
-    for c in logs:
-        file.write(c)
-        file.write('\n')
-    return 1
+    
+    sentence.nsplit(word.length)
+    
+
+    for ngramm in sentence.content:
+        for element in ngramm.get_normal_forms():
+            if element in word.get_normal_forms():
+                print(f'{word.content} found at \n{sentence.content}')
+    
+
+
+
+
+
 
         
 
+def parse_entry(entry, file):
+    if phrase_check(entry['word']):
+        word = Phrase(entry['word'], 'eng', len(entry['word'].split()))
+    else:
+        word = Word(entry['word'], 'eng')
 
+    translations = [Phrase(c, 'ru', len(c.split())) if phrase_check(c) else Word(c, 'ru') for c in entry['translation'].split(',')]
+    for i in range(len(translations)):
+        translations += [translations[i].open_brackets()]
 
+    translations = [c for c in translations if c != None]
+    sentence_eng = Sentence(entry['examples'][0]['eng'], 'eng')
+    sentence_ru  = Sentence(entry['examples'][0]['ru'], 'ru')
 
-
+    parse_sentence(word, sentence_eng, file)
+    for c in translations:
+        parse_sentence(c, sentence_ru, file)
 
 
 
@@ -163,20 +183,9 @@ def main():
 
 
     for entry in get_json_obj('words.json')['entries']:
-        if phrase_check(entry['word']):
-            word = Phrase(entry['word'], 'eng', len(entry['word'].split()))
-        else:
-            word = Word(entry['word'], 'eng')
-        translations = [Phrase(c, 'ru', len(c.split())) if phrase_check(c) else Word(c, 'ru') for c in entry['translation'].split(',')]
-        for i in range(len(translations)):
-            translations += c.open_brackets()
-        sentence_eng = Sentence(entry['examples'][0]['eng'])
-        sentence_ru  = Sentence(entry['examples'][0]['ru'])
-
-        parse(word, sentence_eng, file)
-        for c in translations:
-            parse(c, sentence_ru, file)
-
+        parse_entry(entry, file)
+        
+        
 
         
     file.close()
