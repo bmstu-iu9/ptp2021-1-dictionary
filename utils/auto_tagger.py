@@ -37,16 +37,9 @@ class String:
         
 
     def __repr__(self):
-        return f'String "{self.content}", language = "{self.language}", {self.parse_functions}'
+        return f'String "{self.content}", language = "{self.language}"'
 
-    def open_brackets(self):
-        #меняет self.content на слово с раскрытыми скобками и возвращает новый объект своего класса с раскрытыми скобками
-        #если скобок нет, возвращает None
-        if '(' in self.content:
-            newString = String(re.sub(r'\([^()]*\)', '', self.content), self.language) 
-            self.content = [self.content.replace('(', '').replace(')', '')]
-            return newString
-        return None
+    
 
     def change_similar_letters(self):
         #меняет английские буквы в строке на похожие русские в зависимости от выбранного языка
@@ -68,31 +61,30 @@ class Word(String):
 
     def __init__(self, content, language):
         String.__init__(self, content, language)
-        self.length = 1
+        self.length = len(self.content.split())
+        self.content = self.content.lstrip().rstrip().lower()
         
 
     def __repr__(self):
-        return f'Word "{self.content}", language = "{self.language}"'
+        return f'Word "{self.content}", language = "{self.language}", len = {self.length}'
+
+    def open_brackets(self):
+        #меняет self.content на слово с раскрытыми скобками и возвращает новый объект своего класса с раскрытыми скобками
+        #если скобок нет, возвращает None
+        if '(' in self.content:
+            newWord = Word(re.sub(r'\([^()]*\)', '', self.content), self.language)
+            self.content = self.content.replace('(', '').replace(')', '')
+            return newWord
+        return None
 
     def get_normal_forms(self):
         self.change_similar_letters()
         if self.language == 'eng':
-            parse_func = tuple([lemmatizer.lemmatize(self.content, pos) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)])
+            normal_forms = tuple([lemmatizer.lemmatize(self.content, pos) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)])
         elif self.language == 'ru':
-            parse_func = tuple([c.normal_form for c in morph.parse(self.content)])
-        return parse_func
+            normal_forms = tuple([c.normal_form for c in morph.parse(self.content)])
+        return normal_forms
 
-
-
-
-class Phrase(Word):
-
-    def __init__(self, content, language, length):
-        Word.__init__(self, content, language)
-        self.length = length
-        
-    def __repr__(self):
-        return f'Phrase "{self.content}", language = "{self.language}"'
 
 
 
@@ -115,23 +107,11 @@ class Sentence(String):
                 ngramm = ''
                 del content[0]
             ngrammed_sentence = list(map(lambda c: c.lstrip().rstrip().lower(), ngrammed_sentence))
-            self.content = tuple([Word(c, self.language) if n == 1 else Phrase(c, self.language, n) for c in ngrammed_sentence])
+            self.content = tuple([Word(c, self.language) for c in ngrammed_sentence])
             self.status = 'ngrammed'
 
     def njoin(self):
-        pass
-
-
-
-
-
-
-
-
-    
-
-def phrase_check(string):
-    return string.lstrip().rstrip().count(' ') > 0
+        self.content = ' '.join([c.content.split()[0] for c in self.content])
 
 
 
@@ -139,17 +119,22 @@ def phrase_check(string):
 
 
 def parse_sentence(word, sentence, file):
-    global NLTK_WORDNET_POS_TAGS
     logs = []
-    
+    res = sentence.content
     sentence.nsplit(word.length)
-    
-
+    file.write('-- -- --ищем-- -- -- '+ word.content+'\n\n')
+    file.write('возможные варианты: '+ str(word.get_normal_forms())+ '\n\n')
     for ngramm in sentence.content:
+        file.write('рассматриваем '+ngramm.content)
+        file.write('варианты для соответствия: '+str(ngramm.get_normal_forms())+ '\n\n')
         for element in ngramm.get_normal_forms():
             if element in word.get_normal_forms():
-                print(f'{word.content} found at \n{sentence.content}')
+                file.write(f"Word \"{word.content}\" found\nin \"{res}\"\nin {sentence.content.index(ngramm)+1} position.\n")
+                return True
+        file.write('соответствий не найдено\n\n')
+    return False
     
+
 
 
 
@@ -158,37 +143,47 @@ def parse_sentence(word, sentence, file):
 
         
 
-def parse_entry(entry, file):
-    if phrase_check(entry['word']):
-        word = Phrase(entry['word'], 'eng', len(entry['word'].split()))
+def parse_entry(entry, file, a):
+    eng_sentence = Sentence(entry['examples'][0]['eng'], 'eng')
+    ru_sentence  = Sentence(entry['examples'][0]['ru'], 'ru')
+
+    word = Word(entry['word'], 'eng')
+
+    translation = [Word(c, 'ru') for c in entry['translation'].lstrip().rstrip().split(',')]
+    for i in range(len(translation[:])):
+        translation += [translation[i].open_brackets()]
+    translation = [c for c in translation if c != None]
+
+
+    if not parse_sentence(word, eng_sentence, file):
+        eng_sentence.njoin()
+        file.write(f"-!-!-!-!-!-!-!-\n\nWord \"{word.content}\" not found\nin \"{eng_sentence.content}\"\n\n-!-!-!-!-!-!-!-\n\n\n")
+        a[0]+=1
+    for c in translation:
+        if parse_sentence(c, ru_sentence, file):
+            break
     else:
-        word = Word(entry['word'], 'eng')
-
-    translations = [Phrase(c, 'ru', len(c.split())) if phrase_check(c) else Word(c, 'ru') for c in entry['translation'].split(',')]
-    for i in range(len(translations)):
-        translations += [translations[i].open_brackets()]
-
-    translations = [c for c in translations if c != None]
-    sentence_eng = Sentence(entry['examples'][0]['eng'], 'eng')
-    sentence_ru  = Sentence(entry['examples'][0]['ru'], 'ru')
-
-    parse_sentence(word, sentence_eng, file)
-    for c in translations:
-        parse_sentence(c, sentence_ru, file)
+        ru_sentence.njoin()
+        file.write(f"-!-!-!-!-!-!-!-\n\nWord \"{[c.content for c in translation]}\" not found\nin \"{ru_sentence.content}\"\n\n-!-!-!-!-!-!-!-\n\n\n")
+        a[1]+=1
+    return a
+    
 
 
 
 def main():
     file = open('logs.txt', 'w', encoding = 'utf-8')
-
-
+    a = [0, 0]
     for entry in get_json_obj('words.json')['entries']:
-        parse_entry(entry, file)
-        
-        
-
+        parse_entry(entry, file, a)
         
     file.close()
+    print(f'Всего не найдено {a[0]} английских и {a[1]} русских слов')
+    
+    
+    
+    
+        
     
         
 
