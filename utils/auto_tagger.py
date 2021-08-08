@@ -9,6 +9,7 @@ from pprint import pprint
 from string import punctuation
 import json
 import time
+import itertools
 
 
 print('создание необходимых компонентов...')
@@ -80,10 +81,21 @@ class Word(String):
     def get_normal_forms(self):
         self.change_similar_letters()
         if self.language == 'eng':
-            normal_forms = tuple([lemmatizer.lemmatize(self.content, pos) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)])
+            normal_forms = [' '.join([lemmatizer.lemmatize(w, pos) for w in self.content.split()]) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)]
         elif self.language == 'ru':
-            normal_forms = tuple([c.normal_form for c in morph.parse(self.content)])
-        return normal_forms
+            raw_forms = [[parse.normal_form for parse in morph.parse(word)] for word in self.content.split()]
+            normal_forms = raw_forms[0]
+            del raw_forms[0]
+            while raw_forms:
+                cur = normal_forms[:]
+                normal_forms = []
+                for f in raw_forms[0]:
+                    for c in cur:
+                        normal_forms += [c+' '+f]
+                del raw_forms[0]
+             
+            
+        return tuple(set(normal_forms))
 
 
 
@@ -122,16 +134,10 @@ def parse_sentence(word, sentence, file):
     logs = []
     res = sentence.content
     sentence.nsplit(word.length)
-    file.write('-- -- --ищем-- -- -- '+ word.content+'\n\n')
-    file.write('возможные варианты: '+ str(word.get_normal_forms())+ '\n\n')
     for ngramm in sentence.content:
-        file.write('рассматриваем '+ngramm.content)
-        file.write('варианты для соответствия: '+str(ngramm.get_normal_forms())+ '\n\n')
         for element in ngramm.get_normal_forms():
             if element in word.get_normal_forms():
-                file.write(f"Word \"{word.content}\" found\nin \"{res}\"\nin {sentence.content.index(ngramm)+1} position.\n")
                 return True
-        file.write('соответствий не найдено\n\n')
     return False
     
 
@@ -156,15 +162,14 @@ def parse_entry(entry, file, a):
 
 
     if not parse_sentence(word, eng_sentence, file):
-        eng_sentence.njoin()
-        file.write(f"-!-!-!-!-!-!-!-\n\nWord \"{word.content}\" not found\nin \"{eng_sentence.content}\"\n\n-!-!-!-!-!-!-!-\n\n\n")
+##        file.write(f'{word.get_normal_forms()}\nnot found\n\nat\n{[c.get_normal_forms() for c in eng_sentence.content]}\n\n----------------------------\n\n')
         a[0]+=1
     for c in translation:
         if parse_sentence(c, ru_sentence, file):
+            file.write(f'{c.content} FOUND!!!\n\n')
             break
     else:
-        ru_sentence.njoin()
-        file.write(f"-!-!-!-!-!-!-!-\n\nWord \"{[c.content for c in translation]}\" not found\nin \"{ru_sentence.content}\"\n\n-!-!-!-!-!-!-!-\n\n\n")
+        file.write(f'{[t.get_normal_forms() for t in translation]}\nnot found\n\nat\n{[c.get_normal_forms() for c in ru_sentence.content]}\n\n----------------------------\n\n')
         a[1]+=1
     return a
     
@@ -182,10 +187,13 @@ def main():
     
     
     
-    
+
+        
+        
         
     
         
 
 if __name__ == '__main__':
     main()
+
