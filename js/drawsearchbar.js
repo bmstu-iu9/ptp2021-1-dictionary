@@ -39,7 +39,8 @@ function suggestElements(arrOfMatches){
     arrOfMatches.forEach(element => {
       let myLink = document.createElement("a");
       myLink.innerHTML = element;
-      myLink.href = "#";
+	  let index = words.findIndex(obj => obj.word==element);
+	  myLink.href = "../pages/wordpage.html?wordnumber=" + index;
       myLink.style = "margin: 1%;";     
       mySuggestions.appendChild(myLink);
     });
