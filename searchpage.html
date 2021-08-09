@@ -21,7 +21,8 @@
                         <script>
                             for (var i = 0; i < 26 ; i++) {
                                 var t = String.fromCharCode(65 + i);
-                                document.write("<td><a class=" + t + '_class href="#" title="Показать только слова, начинающиеся на эту букву">' + t + "</a></td>");
+								var k = String.fromCharCode(97 + i);
+                                document.write("<td><a class=" + t + '_class href="#' + k + '" title="Показать только слова, начинающиеся на эту букву">' + t + "</a></td>");
                             }
                         </script>
                         </tr>
