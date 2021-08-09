@@ -3,33 +3,38 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exercises</title>
   <!-- CSS only -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body>
-  <div id="content" style="display: none;">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body>
+    <script src="../js/words.js"></script>
+    <div id="content" style="display: none;">
     <script src="../js/drawsearchbar.js"></script>
-    <div class="page-content">
-      <div class="container">
-        <div class="row" style='padding-top: 9px'>
-          <div class="col-md-6" style="padding-bottom: 9px">
-            <a href="cards.html" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button">Cards</a>
-            <a href="exercise_page.html?task=translate&lang=ru"
-              class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button">Translate into English</a>
-            <a href="exercise_page.html?task=translate&lang=eng"
-              class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button">Translate into Russian</a>
-          </div>
-          <div class="col-md-6">
-            <a href="exercise_page.html?task=choose&lang=eng" class="btn btn-outline-primary btn-lg  btn-block dict_btn"
-              role="button">Choose English translation variant</a>
-            <a href="exercise_page.html?task=choose&lang=ru" class="btn btn-outline-primary btn-lg  btn-block dict_btn"
-              role="button">Choose Russian translation variant</a>
-            <a href="exercise_page.html?task=fill&lang=eng" class="btn btn-outline-primary btn-lg  btn-block dict_btn"
-              role="button">Fill in the blanks</a>
+    <div class="filter">
+      <center>
+        <br>
+      <h4><div id="currentmods">kekww</div></h4>
+      <script>
+        for (var i = 1 ; i < 13 ; i++) {
+            document.write("<button class='btnfilter' id='filter_" + i + "' onclick='changefilter(" + i + ");'>" + "Модуль " + i + "</button>");
+        }
+    </script>
+    </center>
+    </div>
+  	<div class="row" style='padding-top: 9px'>
+  		<div class="col-md-6" style="padding-bottom: 9px">
+        <a href="cards.html" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button" id="ex1btn">Cards</a>
+        <a href="exercise_page.html?task=translate&lang=ru" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button" id="ex2btn">Translate into English</a>
+        <a href="exercise_page.html?task=translate&lang=eng" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button" id="ex3btn">Translate into Russian</a>
+      </div>
+  		<div class="col-md-6" >
+        <a href="exercise_page.html?task=choose&lang=eng" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button" id="ex4btn">Choose English translation variant</a>
+        <a href="exercise_page.html?task=choose&lang=ru" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button" id="ex5btn">Choose Russian translation variant</a>
+        <a href="exercise_page.html?task=fill&lang=eng" class="btn btn-outline-primary btn-lg  btn-block dict_btn" role="button" id="ex6btn">Fill in the blanks</a>
           </div>
         </div>
       </div>
@@ -38,10 +43,9 @@
       <div class="text-center p-4"> Copyright
       </div>
     </footer>
+    <script src="../js/translationfilter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <script type="module" src="../js/searchBarScript.js"></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </div>
 </body>
 

@@ -1,6 +1,17 @@
-import articles from "../json/words.json" assert { type: "json" };
-
-let word_articles = articles.entries;
+var word_articles = [];
+let url1 = new URL(document.location.href);
+let task1 = url1.searchParams.get("task");
+let lang1 = url1.searchParams.get("lang");
+//let mds1 = url1.searchParams.get('mods');
+//alert(mds1);
+//filter(mds1);
+//alert(word_articles);
+let input = document.querySelector('.form');
+word_articles = inwords;
+if ((task1 == "choose") || (task1 == "fill")) { 
+    input.style.display = "none";
+    choose_and_fill_tasks();
+}
 
 function get_random(max) {
     return Math.floor(Math.random() * (max + 1));
@@ -11,26 +22,71 @@ function write_exercise(exercise) {
     ex.innerHTML = exercise[0].toUpperCase() +  exercise.slice(1);
 }
 
-function make_answers_ind(ir) {
-    let pos_right = get_random(3);
-    let answers_ind = [0, 0, 0, 0];
-    answers_ind[pos_right] = ir;
-	let indexes = [ir];
-    for (let i = 0; i < 4; i++) {
-        if (i != pos_right) {
-            let x = get_random(word_articles.length - 1 - indexes.length);
-			for (let j = 0; j < indexes.length; j++) {
-                if (x >= indexes[j]) {
-                    x++;
-                }
-            }
-            answers_ind[i] = x;
-            indexes.push(x);
-            indexes.sort(function (a, b) {
-                return a - b;
-            });
+function fillmodule(mod) {
+    var ret = [];
+    for (var i = 0 ; i < word_articles.length ; i++) {
+        if (word_articles[i].module == mod) {
+            ret.push(i);
         }
     }
+    return ret;
+}
+
+function sortpos(inp, ps) {
+    var ret = [];
+    //alert(inp);
+    for (var i = 0 ; i < inp.length ; i++) {
+        if (word_articles[inp[i]].pos == ps) {
+            ret.push(inp[i]);
+        }
+    }
+    //alert(ret);
+    return ret;
+}
+
+function notduplicate(num, nums) {
+    for (var i = 0 ; i < nums.length ; i++) {
+        //alert(nums[i] + " <=> " + num);
+        if (nums[i] == num) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function fillanswers(from, to) {
+    //alert(to);
+    //alert(from);
+    for (var i = 0 ; i < 4 ; i++) {
+        if (to[i] != -1) { continue; } else {
+            var rand = Math.floor(Math.random() * from.length);
+            if (notduplicate(from[rand], to)) {
+                to[i] = from[rand];
+            } else {
+                i--;
+            }
+        }
+    }
+    //alert(to);
+    return to;
+}
+
+function make_answers_ind(ir) {
+    let pos_right = get_random(3);
+    let answers_ind = [-1, -1, -1, -1];
+    answers_ind[pos_right] = ir;
+    //document.writeln("Всего слов: " + word_articles.length)
+    var viable = fillmodule(word_articles[ir].module);
+    //document.writeln("Слов из этого же модуля: " + viable.length);
+    viable = sortpos(viable, word_articles[ir].pos);
+    //document.writeln("Слов из этого модуля с такой же часть речи: " + viable.length);
+    //alert(viable);
+    if (viable.length < 4) {
+        alert("Подходящих слов всего лишь " + viable.length +", так что я спасу нас обоих от головной боли, не прогружая эту страницу дальше");
+    } else {
+        answers_ind = fillanswers(viable, answers_ind);
+    }
+    //alert(answers_ind);
     return [pos_right, answers_ind];
 }
 
@@ -171,13 +227,4 @@ function choose_and_fill_tasks() {
     write_answers(answers);
     switch_off_radio_button();
     check_answer_on_click(pos_right, answers);
-}
-
-let url1 = new URL(document.location.href);
-let task1 = url1.searchParams.get("task");
-let lang1 = url1.searchParams.get("lang");
-let input = document.querySelector('.form');
-if ((task1 == "choose") || (task1 == "fill")) { 
-    input.style.display = "none";
-    choose_and_fill_tasks();
 }

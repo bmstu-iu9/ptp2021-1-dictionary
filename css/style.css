@@ -1,7 +1,6 @@
-
 body {
   background-color: #c6d8ec;
-  padding-top:100px;
+  padding: 2.5%;
 }
 
 .dict_btn{
@@ -17,7 +16,7 @@ body {
   border-radius: 15px;
   color: #4476fb;
   padding: 3%;
-  width: 80%;
+  margin:auto;
 }
 
 #exercise{
@@ -45,20 +44,20 @@ body {
     z-index: 10;
 }
 
-/*.nav-link {
+.nav-link {
     background-color: #689CD3;
     color: #4476fb;
     border-color:#4476fb;
-}*/
+}
 
 .my-footer {
     background-color: #faf7f0;
 
 }
 
-/*.nav-text {
+.nav-text {
     color: #4476fb;
-}*/
+}
 
 table { 
   background-color:antiquewhite;
@@ -181,4 +180,24 @@ a.word-link {
 
 #front-content, #back-content {
   margin-top: 125px;
+}
+
+.btnfilter {
+  color: black;
+  background-color:aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  min-width: 125px;
+}
+
+.filter {
+  background-color: #faf7f0;
+  border: 2px solid #4476fb;
+  color: #4476fb;
+}
+
+.container {
+  width:80%;
 }
