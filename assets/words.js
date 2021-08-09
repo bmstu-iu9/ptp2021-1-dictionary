@@ -818,7 +818,7 @@ var json = [
 	];
 //document.write('<tr>');
 for (i in json) {
-    document.write('<td><a href="#" title="Показать информацию об этом слове">' + json[i].word + ' (' + json[i].pos + ')</a></td>');
+    document.write('<td><a href="pages/wordpage.html?wordnumber=' + i + '" title="Показать информацию об этом слове">' + json[i].word + ' (' + json[i].pos + ')</a></td>');
 }
 //document.write('</tr');
 
