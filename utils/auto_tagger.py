@@ -131,6 +131,10 @@ class Sentence(String):
 
     def njoin(self):
         self.content = ' '.join([c.content.split()[0] for c in self.content])
+        self.status = 'common'
+
+    def __repr__(self):
+        return f'Sentence "{self.content}",\n language = "{self.language}",\n len = {self.length},\nstatus = {self.status}'
 
 
 
