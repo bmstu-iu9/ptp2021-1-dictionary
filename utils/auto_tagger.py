@@ -2,12 +2,11 @@
 print('загрузка библиотек...')
 import nltk
 from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.stem.snowball import SnowballStemmer
 from nltk.corpus import wordnet
+
 import pymorphy2 as pm
-import tkinter as tk
 import re
-from pprint import pprint
-from string import punctuation
 import json
 import time
 import itertools
@@ -15,10 +14,15 @@ import Levenshtein
 
 
 
+
 print('создание необходимых компонентов...')
 lemmatizer = WordNetLemmatizer()
-stemmer = PorterStemmer()
-morph = pm.MorphAnalyzer()   
+porter = PorterStemmer()
+snowball = SnowballStemmer('russian')
+
+morph = pm.MorphAnalyzer()
+
+
 print('загрузка успешно завершена!\n---------------------------\n\n')
 
 
@@ -146,10 +150,15 @@ def parse_sentence(word, sentence, file):
     for ngramm in sentence.content:
         for ng in ngramm.get_normal_forms():
             for w in word.get_normal_forms():
-                if Levenshtein.distance(ng, w) < 3:
-                    print(f'Слово "{word.content}" найдено как "{ng}"')
+                if  Levenshtein.distance(ng, w) < 3:
                     return True
-    
+
+    for ngramm in sentence.content:
+        for ng in ngramm.get_normal_forms():
+            if snowball.stem(ng) in [snowball.stem(w) for w in word.get_normal_forms()]:
+                print(f'------- {word.content} найдено как {ng} -------')
+                return True
+                
     return False
     
 
@@ -189,6 +198,7 @@ def parse_entry(entry, file, a):
 
 
 def main():
+    now = time.time()
     file = open('logs.txt', 'w', encoding = 'utf-8')
     a = [0, 0]
     for entry in get_json_obj('words.json')['entries']:
@@ -196,6 +206,8 @@ def main():
         
     file.close()
     print(f'Всего не найдено {a[0]} английских и {a[1]} русских слов')
+    print(f'затрачено {time.time()-now} сек на работу алгоритма')
+
     
     
     
