@@ -1,3 +1,4 @@
+
 print('загрузка библиотек...')
 import nltk
 from nltk.stem import PorterStemmer, WordNetLemmatizer
@@ -10,11 +11,14 @@ from string import punctuation
 import json
 import time
 import itertools
+import Levenshtein
+
 
 
 print('создание необходимых компонентов...')
 lemmatizer = WordNetLemmatizer()
-morph = pm.MorphAnalyzer()
+stemmer = PorterStemmer()
+morph = pm.MorphAnalyzer()   
 print('загрузка успешно завершена!\n---------------------------\n\n')
 
 
@@ -79,6 +83,7 @@ class Word(String):
         return None
 
     def get_normal_forms(self):
+##        ПОПРОБОВАТЬ СТЕММЕР ПОРТЕРА И РАССТОЯНИЕ ЛЕВЕНШТЕЙНА
         self.change_similar_letters()
         if self.language == 'eng':
             normal_forms = [' '.join([lemmatizer.lemmatize(w, pos) for w in self.content.split()]) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)]
@@ -93,8 +98,6 @@ class Word(String):
                     for c in cur:
                         normal_forms += [c+' '+f]
                 del raw_forms[0]
-             
-            
         return tuple(set(normal_forms))
 
 
@@ -134,17 +137,26 @@ def parse_sentence(word, sentence, file):
     logs = []
     res = sentence.content
     sentence.nsplit(word.length)
+
     for ngramm in sentence.content:
         for element in ngramm.get_normal_forms():
             if element in word.get_normal_forms():
                 return True
+
+    for ngramm in sentence.content:
+        for ng in ngramm.get_normal_forms():
+            for w in word.get_normal_forms():
+                if Levenshtein.distance(ng, w) < 3:
+                    print(f'Слово "{word.content}" найдено как "{ng}"')
+                    return True
+    
     return False
     
 
 
 
 
-
+##itertools.zip_longest()
 
 
         
