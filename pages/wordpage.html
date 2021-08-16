@@ -10,11 +10,12 @@
 	<body onload="showworddata()">
 		<script src="../js/words.js"></script>
 		<div id="content" style="display:none;">
-		<script src="../js/searchBarScript.js"></script>
 		<script src="../js/drawsearchbar.js"></script>
 		<div class="infosheet">
 			<h3 id="wordandtranclation"></h3>
 			<p id="transcription"></p>
+			<audio id="audiotag"></audio>
+			<input type="image" width="8%" src="../assets/soundbuttonimage.png" onclick="document.getElementById('audiotag').play();">
 			<p id="exampleeng"></p>
 			<p id="exampleru"></p>
 		</div>
@@ -43,11 +44,13 @@
 				var transcription = document.getElementById('transcription');
 				var exampleeng = document.getElementById('exampleeng');
 				var exampleru = document.getElementById('exampleru');
+				var audiotag = document.getElementById('audiotag');
 
 				wordandtranclation.innerHTML = mydata[index].word + "(" + mydata[index].pos + ") - " + mydata[index].translation;
-				transcription.innerHTML =  mydata[index].transcription + '<img src="../assets/soundbuttonimage.png" width="5%" height="5%" alt="Озвучить">';
+				transcription.innerHTML =  mydata[index].transcription;
 				exampleeng.innerHTML = mydata[index].examples[0].eng;
 				exampleru.innerHTML = mydata[index].examples[0].ru;
+				audiotag.src = "../audio/" + mydata[index].word.slice(0,mydata[index].word.length-1) + ".mp3";
             }
 		</script>
         </div>
