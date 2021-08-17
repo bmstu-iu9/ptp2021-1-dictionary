@@ -10,7 +10,7 @@ import re
 import json
 import time
 import itertools
-import Levenshtein
+import Levenshtein 
 
 
 
@@ -87,7 +87,7 @@ class Word(String):
         return None
 
     def get_normal_forms(self):
-##        ПОПРОБОВАТЬ СТЕММЕР ПОРТЕРА И РАССТОЯНИЕ ЛЕВЕНШТЕЙНА
+        #возвращает список лемм слова
         self.change_similar_letters()
         if self.language == 'eng':
             normal_forms = [' '.join([lemmatizer.lemmatize(w, pos) for w in self.content.split()]) for pos in (wordnet.NOUN,wordnet.VERB,wordnet.ADJ,wordnet.ADV)]
@@ -111,11 +111,12 @@ class Sentence(String):
 
     def __init__(self, content, language):
         String.__init__(self, content, language)
-        self.status = 'common'
+        self.res = None
 
     def nsplit(self, n = 1):
         #дробит строку на n-граммы
-        if self.status == 'common': 
+        if not self.res:
+            self.res = self.content
             content = nltk.word_tokenize(self.content)
             ngrammed_sentence = []
             ngramm = ''
@@ -127,14 +128,17 @@ class Sentence(String):
                 del content[0]
             ngrammed_sentence = list(map(lambda c: c.lstrip().rstrip().lower(), ngrammed_sentence))
             self.content = tuple([Word(c, self.language) for c in ngrammed_sentence])
-            self.status = 'ngrammed'
 
     def njoin(self):
-        self.content = ' '.join([c.content.split()[0] for c in self.content])
-        self.status = 'common'
+        self.content = self.res
+        self.res = None
+
+    def tag_content(self, word2tag):
+        pass
+        
 
     def __repr__(self):
-        return f'Sentence "{self.content}",\n language = "{self.language}",\n len = {self.length},\nstatus = {self.status}'
+        return f'Sentence "{self.content}",\n language = "{self.language}",\n len = {self.length},\nngrammed = {bool(self.res)}'
 
 
 
@@ -142,75 +146,95 @@ class Sentence(String):
 
 
 def parse_sentence(word, sentence, file):
-    logs = []
+    #ведет поиск сначала по леммам, потом по расстоянию Левенштейна
     res = sentence.content
     sentence.nsplit(word.length)
 
+    word_normalized = word.get_normal_forms()
+
     for ngramm in sentence.content:
         for element in ngramm.get_normal_forms():
-            if element in word.get_normal_forms():
-                return True
+            if element in word_normalized:
+                sentence.njoin()
+                sentence.content = sentence.content.replace(ngramm.content, r'<b>'+ngramm.content+r'<\b>')
+                sentence.content = sentence.content.replace(ngramm.content.capitalize(), r'<b>'+ngramm.content.capitalize()+r'<\b>')
+                if '<b>' not in sentence.content:
+                    file.write('\n~~~~~~~~~~~~~~~~~~~~\nFOUND WHILE PARSING, BUT NOT AT SENTENCE:\n')
+                    file.write(ngramm.content+ ' not found at "' +sentence.content+'"\n~~~~~~~~~~~~~~~~~~~~\n\n')
+                return sentence.content
 
     for ngramm in sentence.content:
         for ng in ngramm.get_normal_forms():
-            for w in word.get_normal_forms():
+            for w in word_normalized:
                 if  Levenshtein.distance(ng, w) < 3:
-                    return True
-
-    for ngramm in sentence.content:
-        for ng in ngramm.get_normal_forms():
-            if snowball.stem(ng) in [snowball.stem(w) for w in word.get_normal_forms()]:
-                print(f'------- {word.content} найдено как {ng} -------')
-                return True
+                    sentence.njoin()
+                    sentence.content = sentence.content.replace(ngramm.content, r'<b>'+ngramm.content+r'<\b>')
+                    sentence.content = sentence.content.replace(ngramm.content.capitalize(), r'<b>'+ngramm.content.capitalize()+r'<\b>')
+                    if '<b>' not in sentence.content:
+                        file.write('\n~~~~~~~~~~~~~~~~~~~~\nFOUND WHILE PARSING, BUT NOT AT SENTENCE:\n')
+                        file.write(ngramm.content+ ' not found at "' +sentence.content+'"\n~~~~~~~~~~~~~~~~~~~~\n\n')
+                    file.write(f'\n- - - - -\nLEVENSHTEIN: "{word.content}" найдено как "{ng}"\n- - - - -\n')
+                    return sentence.content
                 
     return False
     
 
 
 
-
-##itertools.zip_longest()
-
-
         
 
 def parse_entry(entry, file, a):
+    #парсит словарную статью
     eng_sentence = Sentence(entry['examples'][0]['eng'], 'eng')
     ru_sentence  = Sentence(entry['examples'][0]['ru'], 'ru')
 
     word = Word(entry['word'], 'eng')
 
     translation = [Word(c, 'ru') for c in entry['translation'].lstrip().rstrip().split(',')]
+
+    new_examples = {'eng':entry['examples'][0]['eng'],'ru':entry['examples'][0]['ru']}
+    
     for i in range(len(translation[:])):
         translation += [translation[i].open_brackets()]
     translation = [c for c in translation if c != None]
 
-
-    if not parse_sentence(word, eng_sentence, file):
-##        file.write(f'{word.get_normal_forms()}\nnot found\n\nat\n{[c.get_normal_forms() for c in eng_sentence.content]}\n\n----------------------------\n\n')
+    eng_result_of_parse = parse_sentence(word, eng_sentence, file)
+    if not eng_result_of_parse:
+        file.write(f'{word.get_normal_forms()}\nnot found at\n"{" ".join([c.content for c in eng_sentence.content])}"\n\n')
         a[0]+=1
+    else:
+        new_examples['eng'] = eng_result_of_parse
+
+        
     for c in translation:
-        if parse_sentence(c, ru_sentence, file):
-            file.write(f'{c.content} FOUND!!!\n\n')
+        ru_result_of_parse = parse_sentence(c, ru_sentence, file)
+        if ru_result_of_parse:
+            new_examples['ru'] = ru_result_of_parse
             break
     else:
-        file.write(f'{[t.get_normal_forms() for t in translation]}\nnot found\n\nat\n{[c.get_normal_forms() for c in ru_sentence.content]}\n\n----------------------------\n\n')
+        ru_sentence.njoin()
+        file.write(f'{[t.get_normal_forms() for t in translation]}\nnot found at\n"{ru_sentence.content}"\n\n')
         a[1]+=1
-    return a
+    return (new_examples, a)
     
 
 
 
 def main():
-    now = time.time()
-    file = open('logs.txt', 'w', encoding = 'utf-8')
+    start = time.time()
+    file = open(f'autotagger_logs.txt', 'w', encoding = 'utf-8')
+    tagged_file = open('tagged_words.txt', 'w', encoding = 'utf-8')
     a = [0, 0]
     for entry in get_json_obj('words.json')['entries']:
-        parse_entry(entry, file, a)
+        res_of_parse = parse_entry(entry, file, a)
+        a = res_of_parse[1]
+        tagged_file.write(entry['word']+'\n'+entry['translation']+'\n'+entry['transcription']+'\n'+entry['pos']+'\n'+
+                          res_of_parse[0]['eng']+'\n'+res_of_parse[0]['ru']+'\n\n')
         
     file.close()
+    tagged_file.close()
     print(f'Всего не найдено {a[0]} английских и {a[1]} русских слов')
-    print(f'затрачено {time.time()-now} сек на работу алгоритма')
+    print(f'затрачено {time.time()-start} сек на работу алгоритма')
 
     
     
