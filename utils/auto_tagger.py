@@ -15,6 +15,7 @@ import Levenshtein
 
 
 
+
 print('создание необходимых компонентов...')
 lemmatizer = WordNetLemmatizer()
 porter = PorterStemmer()
@@ -156,10 +157,10 @@ def parse_sentence(word, sentence, file):
         for element in ngramm.get_normal_forms():
             if element in word_normalized:
                 sentence.njoin()
-                sentence.content = sentence.content.replace(ngramm.content, r'<b>'+ngramm.content+r'<\b>')
-                sentence.content = sentence.content.replace(ngramm.content.capitalize(), r'<b>'+ngramm.content.capitalize()+r'<\b>')
-                if '<b>' not in sentence.content:
-                    file.write('\n~~~~~~~~~~~~~~~~~~~~\nFOUND WHILE PARSING, BUT NOT AT SENTENCE:\n')
+                sentence.content = sentence.content.replace(ngramm.content, r'<<b>'+ngramm.content+r'<d>>')
+                sentence.content = sentence.content.replace(ngramm.content.capitalize(), r'<<b>'+ngramm.content.capitalize()+r'<d>>')
+                if '<<b>' not in sentence.content:
+                    file.write('\n~~~~~~~~~~~~~~~~~~~~\nFOUND WHILE PARSING, BUT NOT AT RAW SENTENCE:\n')
                     file.write(ngramm.content+ ' not found at "' +sentence.content+'"\n~~~~~~~~~~~~~~~~~~~~\n\n')
                 return sentence.content
 
@@ -168,10 +169,10 @@ def parse_sentence(word, sentence, file):
             for w in word_normalized:
                 if  Levenshtein.distance(ng, w) < 3:
                     sentence.njoin()
-                    sentence.content = sentence.content.replace(ngramm.content, r'<b>'+ngramm.content+r'<\b>')
-                    sentence.content = sentence.content.replace(ngramm.content.capitalize(), r'<b>'+ngramm.content.capitalize()+r'<\b>')
-                    if '<b>' not in sentence.content:
-                        file.write('\n~~~~~~~~~~~~~~~~~~~~\nFOUND WHILE PARSING, BUT NOT AT SENTENCE:\n')
+                    sentence.content = sentence.content.replace(ngramm.content, r'<<b>'+ngramm.content+r'<d>>')
+                    sentence.content = sentence.content.replace(ngramm.content.capitalize(), r'<<b>'+ngramm.content.capitalize()+r'<d>>')
+                    if '<<b>' not in sentence.content:
+                        file.write('\n~~~~~~~~~~~~~~~~~~~~\nFOUND WHILE PARSING, BUT NOT AT RAW SENTENCE:\n')
                         file.write(ngramm.content+ ' not found at "' +sentence.content+'"\n~~~~~~~~~~~~~~~~~~~~\n\n')
                     file.write(f'\n- - - - -\nLEVENSHTEIN: "{word.content}" найдено как "{ng}"\n- - - - -\n')
                     return sentence.content
