@@ -5,10 +5,10 @@
 			"transcription": "|æplɪˈkeɪʃ(ə)n|",
 			"pos": "n ",
 			"examples": [{
-				"eng": "The research has many practical applications.",
-				"ru": "Данное исследование имеет много практических применений."
+				"eng": "The research has many practical <<b>applications<d>>.",
+				"ru": "Данное исследование имеет много практических <<b>применений<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "abruptly ",
@@ -16,10 +16,10 @@
 			"transcription": "|əˈbrʌptlɪ|",
 			"pos": "adv",
 			"examples": [{
-				"eng": "At the temperature of 4.2 K, he observed that the resistance abruptly disappeared.",
-				"ru": "При температуре 4.2 К он заметил, что сопротивление внезапно исчезло."
+				"eng": "At the temperature of 4.2 K, he observed that the resistance <<b>abruptly<d>> disappeared.",
+				"ru": "При температуре 4.2 К он заметил, что сопротивление <<b>внезапно<d>> исчезло."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "alloy ",
@@ -27,10 +27,10 @@
 			"transcription": "|ˈælɔɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Niobium-titanium alloy.",
+				"eng": "Niobium-titanium <<b>alloy<d>>.",
 				"ru": "Cплав из титана и ниобия."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "apart from ",
@@ -38,10 +38,10 @@
 			"transcription": "|əˈpɑːt frəm|",
 			"pos": "prep",
 			"examples": [{
-				"eng": "Apart from mercury, the original super conductor, you can find the effect in about 25 other elements though it's also been discovered in thousands of compounds and alloys.",
-				"ru": "Помимо ртути, настоящего сверхпроводника, такой эффект можно найти в 25 других элементах, хотя он также был обнаружен в тысячах соединений и сплавов."
+				"eng": "<<b>Apart from<d>> mercury, the original super conductor, you can find the effect in about 25 other elements though it's also been discovered in thousands of compounds and alloys.",
+				"ru": "<<b>Помимо<d>> ртути, настоящего сверхпроводника, такой эффект можно найти в 25 других элементах, хотя он также был обнаружен в тысячах соединений и сплавов."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "assume ",
@@ -49,10 +49,10 @@
 			"transcription": "|əˈsjuːm|",
 			"pos": "prep",
 			"examples": [{
-				"eng": "For many years, scientists assumed superconductivity could happen only at very low temperatures.",
-				"ru": "Много лет учёные считали, что сверхпроводимость возможна только при очень низких температурах."
+				"eng": "For many years, scientists <<b>assumed<d>> superconductivity could happen only at very low temperatures.",
+				"ru": "Много лет учёные <<b>считали<d>>, что сверхпроводимость возможна только при очень низких температурах."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "amount ",
@@ -60,10 +60,10 @@
 			"transcription": "|əˈmaʊnt|",
 			"pos": "n",
 			"examples": [{
-				"eng": "The amount of energy lost varies depending on the individual material’s electrical resistance.",
-				"ru": "Количество потерянной энергии варьируется в зависимости от сопротивления отдельного материала…"
+				"eng": "The <<b>amount<d>> of energy lost varies depending on the individual material’s electrical resistance.",
+				"ru": "<<b>Количество<d>> потерянной энергии варьируется в зависимости от сопротивления отдельного материала…"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "awful ",
@@ -71,10 +71,10 @@
 			"transcription": "|ˈɔːfʊl| ",
 			"pos": "a",
 			"examples": [{
-				"eng": "But if they could find a really high-temperature superconductor, their job would be an awful lot easier!",
+				"eng": "But if they could find a really high-temperature superconductor, their job would be an <<b>awful<d>> lot easier!",
 				"ru": "Но если бы они могли найти действительно высокотемпературный сверхпроводник, их работа была бы до ужаса простой!"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "accelerator ",
@@ -82,10 +82,10 @@
 			"transcription": "|əkˈseləreɪtə|",
 			"pos": "n",
 			"examples": [{
-				"eng": "The plasma accelerator is used as an engine for driving spacecraft.",
-				"ru": "Ускоритель плазмы используется как двигатель для перемещения космических объектов."
+				"eng": "The plasma <<b>accelerator<d>> is used as an engine for driving spacecraft.",
+				"ru": "<<b>Ускоритель<d>> плазмы используется как двигатель для перемещения космических объектов."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "alter ",
@@ -93,10 +93,10 @@
 			"transcription": "|ˈɔːltə|",
 			"pos": "v",
 			"examples": [{
-				"eng": "You cannot alter your nature.",
-				"ru": "Свою природу не изменишь."
+				"eng": "You cannot <<b>alter<d>> your nature.",
+				"ru": "Свою природу не <<b>изменишь<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "breakthrough ",
@@ -104,10 +104,10 @@
 			"transcription": "|ˈbreɪkθruː|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Many scientists consider this major breakthrough to be as important as the invention of the transistor. ",
-				"ru": "Многие ученые считают этот значительный прорыв таким же важным, как и изобретение транзистора."
+				"eng": "Many scientists consider this major <<b>breakthrough<d>> to be as important as the invention of the transistor. ",
+				"ru": "Многие ученые считают этот значительный <<b>прорыв<d>> таким же важным, как и изобретение транзистора."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "bunch of people",
@@ -115,10 +115,10 @@
 			"transcription": "|bʌn(t)ʃ əv ˈpiːp(ə)l|",
 			"pos": "phr",
 			"examples": [{
-				"eng": "It's just a bunch of people getting on an airplane.",
-				"ru": "Просто группа людей заходит в самолёт."
+				"eng": "It's just a <<b>bunch of people<d>> getting on an airplane.",
+				"ru": "Просто <<b>группа людей<d>> заходит в самолёт."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "below ",
@@ -126,10 +126,10 @@
 			"transcription": "|bɪˈləʊ|",
 			"pos": "adv",
 			"examples": [{
-				"eng": "Cooled below a critical temperature certain materials display astonishing characteristics.",
-				"ru": "Охлажденные ниже критической температуры, некоторые материалы показывают поразительные характеристики."
+				"eng": "Cooled <<b>below<d>> a critical temperature certain materials display astonishing characteristics.",
+				"ru": "Охлажденные <<b>ниже<d>> критической температуры, некоторые материалы показывают поразительные характеристики."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "benefit ",
@@ -137,10 +137,10 @@
 			"transcription": "|ˈbenɪfɪt|",
 			"pos": "n",
 			"examples": [{
-				"eng": "That means whatever benefit you gain from their lack of resistance, you probably lose from having to cool them down in the first place.",
-				"ru": "Это значит какие бы преимущества вы бы не получали от их отсутствия сопротивления, вы, вероятно, проиграете от необходимости охладить их в первую очередь."
+				"eng": "That means whatever <<b>benefit<d>> you gain from their lack of resistance, you probably lose from having to cool them down in the first place.",
+				"ru": "Это значит какие бы <<b>преимущества<d>> вы бы не получали от их отсутствия сопротивления, вы, вероятно, проиграете от необходимости охладить их в первую очередь."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "boil ",
@@ -148,10 +148,10 @@
 			"transcription": "|bɔɪl|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Liquid nitrogen boils at 77 K, and superconductivity at higher temperatures than this facilitates many experiments and applications that are less practical at lower temperatures.",
-				"ru": "Жидкий нитроген кипит при 77 К, а сверхпроводимость при более высоких температурах облегчает многие эксперименты и применения, которые менее практичны при более низких температурах."
+				"eng": "Liquid nitrogen <<b>boils<d>> at 77 K, and superconductivity at higher temperatures than this facilitates many experiments and applications that are less practical at lower temperatures.",
+				"ru": "Жидкий нитроген <<b>кипит<d>> при 77 К, а сверхпроводимость при более высоких температурах облегчает многие эксперименты и применения, которые менее практичны при более низких температурах."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "cool ",
@@ -159,10 +159,10 @@
 			"transcription": "|kuːl|",
 			"pos": "v",
 			"examples": [{
-				"eng": "But if you had to cool large parts of the plant and all the transmission wires to absolute zero, you’d probably waste far more energy doing that than you’d ever save from having no resistance in cables.",
-				"ru": "Но если бы вам пришлось охладить большую часть завода и все передающие провода до абсолютного нуля, вы, вероятно, потратили бы намного больше энергии из-за этого, чем вы когда-либо сэкономили бы от отсутствия сопротивления в кабелях."
+				"eng": "But if you had to <<b>cool<d>> large parts of the plant and all the transmission wires to absolute zero, you’d probably waste far more energy doing that than you’d ever save from having no resistance in cables.",
+				"ru": "Но если бы вам пришлось <<b>охладить<d>> большую часть завода и все передающие провода до абсолютного нуля, вы, вероятно, потратили бы намного больше энергии из-за этого, чем вы когда-либо сэкономили бы от отсутствия сопротивления в кабелях."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "compound ",
@@ -170,10 +170,10 @@
 			"transcription": "|ˈkɒmpaʊnd|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Most superconductors are alloys or compounds.",
-				"ru": "Большинство сверхпроводников – сплавы или соединения."
+				"eng": "Most superconductors are alloys or <<b>compounds<d>>.",
+				"ru": "Большинство сверхпроводников – сплавы или <<b>соединения<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "conduct ",
@@ -181,10 +181,10 @@
 			"transcription": "|kənˈdʌkt|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Practically all metals would conduct electricity.",
-				"ru": "Практически все металлы могут проводить электричество."
+				"eng": "Practically all metals would <<b>conduct<d>> electricity.",
+				"ru": "Практически все металлы могут <<b>проводить<d>> электричество."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "conductor ",
@@ -192,10 +192,10 @@
 			"transcription": "|kənˈdʌktə| ",
 			"pos": "n",
 			"examples": [{
-				"eng": "If conductor resistance could be eliminated entirely, there would be no power losses or inefficiencies in electric power systems due to stray resistances.",
-				"ru": "Если бы сопротивление проводников могло бы быть полностью устранено, то в электрических системах не было бы потерь или неэффективности электроэнергии из-за случайного сопротивления."
+				"eng": "If <<b>conductor<d>> resistance could be eliminated entirely, there would be no power losses or inefficiencies in electric power systems due to stray resistances.",
+				"ru": "Если бы сопротивление <<b>проводников<d>> могло бы быть полностью устранено, то в электрических системах не было бы потерь или неэффективности электроэнергии из-за случайного сопротивления."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "consequence ",
@@ -203,10 +203,10 @@
 			"transcription": "|ˈkɒnsɪkw(ə)ns|",
 			"pos": "n",
 			"examples": [{
-				"eng": "In 1935 F. and H. London showed that the Meissner effect was a consequence of the minimization of the electromagnetic free energy carried by superconducting current.",
-				"ru": "В 1935 году Ф. и Х. Лондон показали, что эффект Мейснера является следствием минимизации электромагнитной свободной энергии, переносимой сверхпроводящим током."
+				"eng": "In 1935 F. and H. London showed that the Meissner effect was a <<b>consequence<d>> of the minimization of the electromagnetic free energy carried by superconducting current.",
+				"ru": "В 1935 году Ф. и Х. Лондон показали, что эффект Мейснера является <<b>следствием<d>> минимизации электромагнитной свободной энергии, переносимой сверхпроводящим током."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "circumstance ",
@@ -214,10 +214,10 @@
 			"transcription": "|ˈsɜːkəmst(ə)ns|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Each circumstance requires additional, enabling arrangements to enhance the use of this modality.",
-				"ru": "В каждом случае необходимы дополнительные процедуры, которые позволили бы расширить сферу использования этого механизма."
+				"eng": "Each <<b>circumstance<d>> requires additional, enabling arrangements to enhance the use of this modality.",
+				"ru": "В каждом <<b>случае<d>> необходимы дополнительные процедуры, которые позволили бы расширить сферу использования этого механизма."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "cause ",
@@ -225,10 +225,10 @@
 			"transcription": "|kɔːz|",
 			"pos": "v",
 			"examples": [{
-				"eng": "To lose heat or cause sth to lose heat…",
-				"ru": "Потерять тепло или вызвать у чего-то потерю тепла..."
+				"eng": "To lose heat or <<b>cause<d>> sth to lose heat…",
+				"ru": "Потерять тепло или <<b>вызвать<d>> у чего-то потерю тепла..."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "contain ",
@@ -236,10 +236,10 @@
 			"transcription": "|kənˈteɪn| ",
 			"pos": "v",
 			"examples": [{
-				"eng": "Some data lines may contain comments pertaining to individual values.",
-				"ru": "Некоторые строки данных могут содержать замечания, относящиеся к отдельным числовым значениям."
+				"eng": "Some data lines may <<b>contain<d>> comments pertaining to individual values.",
+				"ru": "Некоторые строки данных могут <<b>содержать<d>> замечания, относящиеся к отдельным числовым значениям."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "capacity ",
@@ -247,10 +247,10 @@
 			"transcription": "|kəˈpæsɪtɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Most of the physical properties of superconductors vary from material to material, such as the heat capacity and the critical temperature, critical field, and critical current density at which superconductivity is destroyed.",
+				"eng": "Most of the physical properties of superconductors vary from material to material, such as the heat <<b>capacity<d>> and the critical temperature, critical field, and critical current density at which superconductivity is destroyed.",
 				"ru": "Большинство физических свойств сверхпроводников варьируются от материала к материалу, такие как теплоёмкость и критическая температура, критическое поле и критическая плотность тока, при которой разрушается сверхпроводимость."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "certain ",
@@ -258,10 +258,10 @@
 			"transcription": "|ˈsɜːt(ə)n|",
 			"pos": "a",
 			"examples": [{
-				"eng": "The superconductor is brought into a certain distance of a few millimeters above the magnetic rail.",
-				"ru": "Сверхпроводник помещается на определенном расстоянии нескольких миллиметров над магнитным рельсом."
+				"eng": "The superconductor is brought into a <<b>certain<d>> distance of a few millimeters above the magnetic rail.",
+				"ru": "Сверхпроводник помещается на <<b>определенном<d>> расстоянии нескольких миллиметров над магнитным рельсом."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "conventional material",
@@ -269,10 +269,10 @@
 			"transcription": "|kənˈvenʃ(ə)n(ə)l məˈtɪərɪəl|",
 			"pos": "phr",
 			"examples": [{
-				"eng": "Durability (resistance to dispersion) and lifetime is less than conventional materials.",
-				"ru": "Износостойкость (стойкость к дисперсии) и срок службы у них меньше, чем у обычных материалов."
+				"eng": "Durability (resistance to dispersion) and lifetime is less than <<b>conventional materials<d>>.",
+				"ru": "Износостойкость (стойкость к дисперсии) и срок службы у них меньше, чем у <<b>обычных материалов<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "cease ",
@@ -280,10 +280,10 @@
 			"transcription": "|siːs|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Those cyber-attacks must cease.",
+				"eng": "Those cyber-attacks must <<b>cease<d>>.",
 				"ru": "Эти хакерские атаки должны прекратиться."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "current ",
@@ -291,10 +291,10 @@
 			"transcription": "|ˈkʌr(ə)nt|",
 			"pos": "n",
 			"examples": [{
-				"eng": "K. Onnes discovered the first superconductor, a material in which an electrical current encounters low resistance. ",
+				"eng": "K. Onnes discovered the first superconductor, a material in which an electrical <<b>current<d>> encounters low resistance. ",
 				"ru": "Оннес открыл первый сверхпроводник, материал, в котором электрический ток сталкивается с низким сопротивлением."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "condense ",
@@ -302,10 +302,10 @@
 			"transcription": "|kənˈdens|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Many other superconductors have since been discovered, and the theory of superconductivity in these materials is one of the major outstanding challenges of theoretical condensed matter physics.",
+				"eng": "Many other superconductors have since been discovered, and the theory of superconductivity in these materials is one of the major outstanding challenges of theoretical <<b>condensed<d>> matter physics.",
 				"ru": "С тех пор было открыто много других суперпроводников, и теория сверхпроводимости в этих материалах является одной из главных нерешенных задач теоретической физики конденсированного состояния."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "continue ",
@@ -313,10 +313,10 @@
 			"transcription": "|kənˈtɪnjuː|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Would the resistance continue to slowly decrease? ",
-				"ru": "Продолжит ли сопротивление медленно снижаться?"
+				"eng": "Would the resistance <<b>continue<d>> to slowly decrease? ",
+				"ru": "<<b>Продолжит<d>> ли сопротивление медленно снижаться?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "discover ",
@@ -324,10 +324,10 @@
 			"transcription": "|dɪˈskʌvə| ",
 			"pos": "v",
 			"examples": [{
-				"eng": "Why and how did Kamerlingh Onnes discover superconductivity?",
-				"ru": "Почему и как Камерлингх Оннес открыл сверхпроводимость?"
+				"eng": "Why and how did Kamerlingh Onnes <<b>discover<d>> superconductivity?",
+				"ru": "Почему и как Камерлингх Оннес <<b>открыл<d>> сверхпроводимость?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "destroy ",
@@ -335,10 +335,10 @@
 			"transcription": "|dɪˈstrɔɪ|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Most of the physical properties of superconductors vary from material to material, such as the heat capacity and the critical temperature, critical field, and critical current density at which superconductivity is destroyed.",
-				"ru": "Большинство физических свойств сверхпроводников варьируются от материала к материалу, такие как теплоёмкость и критическая температура, критическое поле и критическая плотность тока, при которой разрушается сверхпроводимость."
+				"eng": "Most of the physical properties of superconductors vary from material to material, such as the heat capacity and the critical temperature, critical field, and critical current density at which superconductivity is <<b>destroyed<d>>.",
+				"ru": "Большинство физических свойств сверхпроводников варьируются от материала к материалу, такие как теплоёмкость и критическая температура, критическое поле и критическая плотность тока, при которой <<b>разрушается<d>> сверхпроводимость."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "depend on ",
@@ -346,10 +346,10 @@
 			"transcription": "|dɪˈpend ɒn|",
 			"pos": "v",
 			"examples": [{
-				"eng": "The first measurements showed a saturation to a minimum of resistance, but this limit seemed to depend on the purity of the metal.",
-				"ru": "Первые измерения показали, что уровень сатурации был минимальным, однако этот предел, как представляется, зависит от чистоты металла."
+				"eng": "The first measurements showed a saturation to a minimum of resistance, but this limit seemed to <<b>depend on<d>> the purity of the metal.",
+				"ru": "Первые измерения показали, что уровень сатурации был минимальным, однако этот предел, как представляется, <<b>зависит<d>> от чистоты металла."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "depreciation ",
@@ -357,10 +357,10 @@
 			"transcription": "|dɪˌpriːʃɪˈeɪʃ(ə)n|",
 			"pos": "n",
 			"examples": [{
-				"eng": "This has been demonstrated by scientists who have sustained electrical currents in superconductive rings for years without any measurable depreciation of energy …;",
-				"ru": "Это было продемонстрировано учеными, которые годами поддерживали электрический ток в сверхпроводящих кольцах без какой-либо измеримой амортизации энергии …;"
+				"eng": "This has been demonstrated by scientists who have sustained electrical currents in superconductive rings for years without any measurable <<b>depreciation<d>> of energy …;",
+				"ru": "Это было продемонстрировано учеными, которые годами поддерживали электрический ток в сверхпроводящих кольцах без какой-либо измеримой <<b>амортизации<d>> энергии …;"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "determine ",
@@ -368,10 +368,10 @@
 			"transcription": "|dɪˈtɜːmɪn|",
 			"pos": "v",
 			"examples": [{
-				"eng": "What determines the distance between the rail and train?",
-				"ru": "Что определяет расстояние между железной дорогой и поездом?"
+				"eng": "What <<b>determines<d>> the distance between the rail and train?",
+				"ru": "Что <<b>определяет<d>> расстояние между железной дорогой и поездом?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "decision ",
@@ -379,10 +379,10 @@
 			"transcription": "|dɪˈsɪʒ(ə)n|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Now you think that your decision was wrong.",
-				"ru": "Теперь вы думаете, что ваше решение было неверным."
+				"eng": "Now you think that your <<b>decision<d>> was wrong.",
+				"ru": "Теперь вы думаете, что ваше <<b>решение<d>> было неверным."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "define ",
@@ -390,10 +390,10 @@
 			"transcription": "|dɪˈfaɪn|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Absolute zero (or minus 273 Celsius) is defined as …",
-				"ru": "Абсолютный ноль (или минус 273 градуса Цельсия) определяется как…"
+				"eng": "Absolute zero (or minus 273 Celsius) is <<b>defined<d>> as …",
+				"ru": "Абсолютный ноль (или минус 273 градуса Цельсия) <<b>определяется<d>> как…"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "density ",
@@ -401,10 +401,10 @@
 			"transcription": "|ˈdensɪtɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "What is meant by the critical current density when we speak about superconductors?",
-				"ru": "Что подразумевается под критической плотностью тока, когда мы говорим о сверхпроводниках?"
+				"eng": "What is meant by the critical current <<b>density<d>> when we speak about superconductors?",
+				"ru": "Что подразумевается под критической <<b>плотностью<d>> тока, когда мы говорим о сверхпроводниках?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "introduce ",
@@ -412,10 +412,10 @@
 			"transcription": "|ɪntrəˈdjuːs|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Wherein the order parameter introduced by Landau to describe phase transitions is identified as a scalar wave function.",
+				"eng": "Wherein the order parameter <<b>introduced<d>> by Landau to describe phase transitions is identified as a scalar wave function.",
 				"ru": "Причем параметр, введенный Ландау для описания фазовых переходов определяется как скалярная волновая функция. "
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "lack ",
@@ -423,10 +423,10 @@
 			"transcription": "|læk|",
 			"pos": "v",
 			"examples": [{
-				"eng": "…the lack of friction…",
+				"eng": "…the <<b>lack<d>> of friction…",
 				"ru": "…отсутствие трения…"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "lose ",
@@ -434,10 +434,10 @@
 			"transcription": "|luːz|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Metals readily lose and gain electrons, so they top the list of conductors. ",
+				"eng": "Metals readily <<b>lose<d>> and gain electrons, so they top the list of conductors. ",
 				"ru": "Металлы легко отдают и получают электроны, так что они первые в списке проводников."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "loss ",
@@ -445,10 +445,10 @@
 			"transcription": "|lɒs|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Electricity is conducted perfectly, without any loss and a current can theoretically flow in a closed loop for ever.",
-				"ru": "Электричество проводится отлично, без каких-либо потерь, и ток теоретически может течь в закрытом контуре бесконечно."
+				"eng": "Electricity is conducted perfectly, without any <<b>loss<d>> and a current can theoretically flow in a closed loop for ever.",
+				"ru": "Электричество проводится отлично, без каких-либо <<b>потерь<d>>, и ток теоретически может течь в закрытом контуре бесконечно."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "lead ",
@@ -456,10 +456,10 @@
 			"transcription": "|liːd|",
 			"pos": "n",
 			"examples": [{
-				"eng": "In 1913 lead was found to superconduct at 7 K, in 1941 niobium nitride was found to superconduct at 16 K. ",
-				"ru": "В 1913 году было обнаружено, что сверхпроводимость свинца составляет 7 K, в 1941 году открыли, что сверхпроводимость нитрида ниобия - 16 K."
+				"eng": "In 1913 <<b>lead<d>> was found to superconduct at 7 K, in 1941 niobium nitride was found to superconduct at 16 K. ",
+				"ru": "В 1913 году было обнаружено, что сверхпроводимость <<b>свинца<d>> составляет 7 K, в 1941 году открыли, что сверхпроводимость нитрида ниобия - 16 K."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "magnetic flux",
@@ -467,10 +467,10 @@
 			"transcription": "|mæɡˈnetɪk flʌks| ",
 			"pos": "phr",
 			"examples": [{
-				"eng": "…which protects the material from the magnetic flux.",
-				"ru": "…который защищает материал от магнитного потока."
+				"eng": "…which protects the material from the <<b>magnetic flux<d>>.",
+				"ru": "…который защищает материал от <<b>магнитного потока<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "pass ",
@@ -478,10 +478,10 @@
 			"transcription": "|pɑːs|",
 			"pos": "v",
 			"examples": [{
-				"eng": "The more energy is passed to the atoms the less kinetic energy remains for the electrons and the lower the resistance.",
-				"ru": "Чем больше энергии передается атому, тем меньше кинетической энергии остается в электроне и тем меньше сопротивление. "
+				"eng": "The more energy is <<b>passed<d>> to the atoms the less kinetic energy remains for the electrons and the lower the resistance.",
+				"ru": "Чем больше энергии <<b>передается<d>> атому, тем меньше кинетической энергии остается в электроне и тем меньше сопротивление. "
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "property ",
@@ -489,10 +489,10 @@
 			"transcription": "|ˈprɒpətɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "The Meissner effect, a property of all superconductors, was discovered by the German physicists…",
-				"ru": "Эффект Мейснера, свойство всех сверхпроводников, был открыт немецкими физиками..."
+				"eng": "The Meissner effect, a <<b>property<d>> of all superconductors, was discovered by the German physicists…",
+				"ru": "Эффект Мейснера, <<b>свойство<d>> всех сверхпроводников, был открыт немецкими физиками..."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "prediction ",
@@ -500,10 +500,10 @@
 			"transcription": "|prɪˈdɪkʃ(ə)n|",
 			"pos": "n",
 			"examples": [{
-				"eng": "In 1962 Brian Josephson made the important theoretical prediction…",
-				"ru": "В 1962 году Брайан Джозефсон сделал важное теоретическое предсказание..."
+				"eng": "In 1962 Brian Josephson made the important theoretical <<b>prediction…<d>>",
+				"ru": "В 1962 году Брайан Джозефсон сделал важное теоретическое <<b>предсказание<d>>..."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "resistance ",
@@ -511,10 +511,10 @@
 			"transcription": "|rɪˈzɪst(ə)ns|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Even though a superconducting wire would have zero resistance to oppose current, there will still ВЕ a limit of how much current could practically go through that wire due to its critical magnetic field.",
-				"ru": "Несмотря на сверхпроводящие провода могут иметь нулевое сопротивление к нынешнему току, все еще будет ограничение того, как много тока может действительно пройти через провод из-за его критического магнитного поля."
+				"eng": "Even though a superconducting wire would have zero <<b>resistance<d>> to oppose current, there will still ВЕ a limit of how much current could practically go through that wire due to its critical magnetic field.",
+				"ru": "Несмотря на сверхпроводящие провода могут иметь нулевое <<b>сопротивление<d>> к нынешнему току, все еще будет ограничение того, как много тока может действительно пройти через провод из-за его критического магнитного поля."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "resistivity ",
@@ -522,10 +522,10 @@
 			"transcription": "|ˌrɪzɪˈstɪvɪtɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "The resistivity of plutonium at room temperature is very high for a metal, and it gets even higher with lower temperatures, which is unusual for metals.",
-				"ru": "Удельное сопротивление плутония при комнатной температуре очень велико для металла, и эта особенность будет усиливаться с понижением температуры, что для металлов не свойственно."
+				"eng": "The <<b>resistivity<d>> of plutonium at room temperature is very high for a metal, and it gets even higher with lower temperatures, which is unusual for metals.",
+				"ru": "<<b>Удельное сопротивление<d>> плутония при комнатной температуре очень велико для металла, и эта особенность будет усиливаться с понижением температуры, что для металлов не свойственно."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "refrigerant ",
@@ -533,10 +533,10 @@
 			"transcription": "|rɪˈfrɪdʒ(ə)r(ə)nt| ",
 			"pos": "n",
 			"examples": [{
-				"eng": "This latter discovery was significant because liquid nitrogen could then be used as a refrigerant.",
+				"eng": "This latter discovery was significant because liquid nitrogen could then be used as a <<b>refrigerant<d>>.",
 				"ru": "Это последнее открытие было важным, поскольку затем жидкий азот мог использоваться в качестве охлаждающего вещества."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "raw material ",
@@ -544,10 +544,10 @@
 			"transcription": "|rɔː məˈtɪərɪəl|",
 			"pos": "n ",
 			"examples": [{
-				"eng": "This is important commercially because liquid nitrogen can be produced cheaply on-site with no raw materials.",
-				"ru": "Это важно с коммерческой стороны потому что жидкий азот может быть произведен дешево на месте без сырья."
+				"eng": "This is important commercially because liquid nitrogen can be produced cheaply on-site with no <<b>raw materials<d>>.",
+				"ru": "Это важно с коммерческой стороны потому что жидкий азот может быть произведен дешево на месте без <<b>сырья<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "recent ",
@@ -555,10 +555,10 @@
 			"transcription": "|ˈriːs(ə)nt|",
 			"pos": "a",
 			"examples": [{
-				"eng": "One of the biggest successes in the recent past is the production of a flexible yttrium-barium-copper-oxide tape, created in April 1995.",
-				"ru": "Одним из самых больших успехов в недавнем прошлом стало производство гибкой ленты из оксида иттрия-бария-меди, созданной в апреле 1995 года."
+				"eng": "One of the biggest successes in the <<b>recent<d>> past is the production of a flexible yttrium-barium-copper-oxide tape, created in April 1995.",
+				"ru": "Одним из самых больших успехов в <<b>недавнем<d>> прошлом стало производство гибкой ленты из оксида иттрия-бария-меди, созданной в апреле 1995 года."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "remain ",
@@ -566,10 +566,10 @@
 			"transcription": "|rɪˈmeɪn|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Called superconductivity this discovery remained without practical applications for decades.     ",
-				"ru": "Названное сверхпроводимостью, это открытие осталось без практического применения на десятилетия."
+				"eng": "Called superconductivity this discovery <<b>remained<d>> without practical applications for decades.     ",
+				"ru": "Названное сверхпроводимостью, это открытие <<b>осталось<d>> без практического применения на десятилетия."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "rare ",
@@ -577,10 +577,10 @@
 			"transcription": "|reə|",
 			"pos": "a",
 			"examples": [{
-				"eng": "Because his genetic code contains the rare M-cell.",
-				"ru": "Потому что его генетический код содержит редкую М-клетку."
+				"eng": "Because his genetic code contains the <<b>rare<d>> M-cell.",
+				"ru": "Потому что его генетический код содержит <<b>редкую<d>> М-клетку."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "sample ",
@@ -588,10 +588,10 @@
 			"transcription": "|ˈsɑːmp(ə)l|",
 			"pos": "n",
 			"examples": [{
-				"eng": "What was used as a superconducting sample in the experiment?",
-				"ru": "Что было использовано как образец сверхпроводника в этом эксперименте?"
+				"eng": "What was used as a superconducting <<b>sample<d>> in the experiment?",
+				"ru": "Что было использовано как <<b>образец<d>> сверхпроводника в этом эксперименте?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "satisfy ",
@@ -599,10 +599,10 @@
 			"transcription": "|ˈsætɪsfæɪ|",
 			"pos": "v",
 			"examples": [{
-				"eng": "I am not satisfied with your work.",
+				"eng": "I am not <<b>satisfied<d>> with your work.",
 				"ru": "Я не доволен твоей работой. "
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "satisfactory ",
@@ -610,10 +610,10 @@
 			"transcription": "|sætɪsˈfækt(ə)rɪ|",
 			"pos": "a",
 			"examples": [{
-				"eng": "Results are less satisfactory than had been expected.",
-				"ru": "Результаты оказались не столь удовлетворительными, как ожидались."
+				"eng": "Results are less <<b>satisfactory<d>> than had been expected.",
+				"ru": "Результаты оказались не столь <<b>удовлетворительными<d>>, как ожидались."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "suddenly ",
@@ -621,10 +621,10 @@
 			"transcription": "|ˈsʌd(ə)nlɪ|",
 			"pos": "adv",
 			"examples": [{
-				"eng": "This happens as if the metal electrons suddenly started to move forward with nothing to slow them down.",
-				"ru": "Это происходит так, будто электроны металла резко начали двигаться вперед без чего-либо, что могло бы их замедлить."
+				"eng": "This happens as if the metal electrons <<b>suddenly<d>> started to move forward with nothing to slow them down.",
+				"ru": "Это происходит так, будто электроны металла <<b>резко<d>> начали двигаться вперед без чего-либо, что могло бы их замедлить."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "sufficiently ",
@@ -632,10 +632,10 @@
 			"transcription": "|səˈfɪʃntlɪ|",
 			"pos": "adv",
 			"examples": [{
-				"eng": "Subsequent tests of tin and lead showed that superconductivity was a property of numerous metals if they were cooled sufficiently.",
-				"ru": "Последующие испытания олова и свинца показали, что сверхпроводимость была собственностью некоторых металлов если бы они были достаточно охлаждены."
+				"eng": "Subsequent tests of tin and lead showed that superconductivity was a property of numerous metals if they were cooled <<b>sufficiently<d>>.",
+				"ru": "Последующие испытания олова и свинца показали, что сверхпроводимость была собственностью некоторых металлов если бы они были <<b>достаточно<d>> охлаждены."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "superconductivity ",
@@ -643,10 +643,10 @@
 			"transcription": "|ˌsuːpəkɒndʌkˈtɪvɪtɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "The phenomenon of superconductivity has always been very exciting, both for its fundamental scientific interest and because of its many applications.",
-				"ru": "Феномен сверхпроводимости всегда был очень захватывающим как из-за его фундаментального научного интереса, так и из-за его многочисленных применений."
+				"eng": "The phenomenon of <<b>superconductivity<d>> has always been very exciting, both for its fundamental scientific interest and because of its many applications.",
+				"ru": "Феномен <<b>сверхпроводимости<d>> всегда был очень захватывающим как из-за его фундаментального научного интереса, так и из-за его многочисленных применений."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "superconductor ",
@@ -654,10 +654,10 @@
 			"transcription": "|ˌsuːpəkənˈdʌktə|",
 			"pos": "n",
 			"examples": [{
-				"eng": "For this reason, it is important that all students of science and engineering understand the basic electromagnetic properties of superconductors and become aware of the scope of their current applications.",
-				"ru": "Поэтому важно, чтобы все студенты научных и инженерных специальностей понимали основные электромагнитные свойства сверхпроводников и были осведомлены о масштабах их нынешних применений."
+				"eng": "For this reason, it is important that all students of science and engineering understand the basic electromagnetic properties of <<b>superconductors<d>> and become aware of the scope of their current applications.",
+				"ru": "Поэтому важно, чтобы все студенты научных и инженерных специальностей понимали основные электромагнитные свойства <<b>сверхпроводников<d>> и были осведомлены о масштабах их нынешних применений."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "semiconductor ",
@@ -665,10 +665,10 @@
 			"transcription": "|ˌsemɪkənˈdʌktə|",
 			"pos": "n",
 			"examples": [{
-				"eng": "To implant ions in a semiconductor.",
-				"ru": "Внедрять ионы в полупроводник."
+				"eng": "To implant ions in a <<b>semiconductor<d>>.",
+				"ru": "Внедрять ионы в <<b>полупроводник<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "silicon ",
@@ -676,10 +676,10 @@
 			"transcription": "|ˈsɪlɪk(ə)n|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Is it really wise for Silicon Valley to sic the government on Microsoft?",
+				"eng": "Is it really wise for <<b>Silicon<d>> Valley to sic the government on Microsoft?",
 				"ru": "Действительно ли разумно для Силиконовой Долины натравить правительство на Майкрософт?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "superfluidity ",
@@ -687,10 +687,10 @@
 			"transcription": "|suːpəfluːˈɪdɪtɪ|",
 			"pos": "n",
 			"examples": [{
-				"eng": "For his basic inventions and discoveries in the area of low temperature physics, which included the discovery of superfluidity in helium.",
-				"ru": "За основные изобретения и открытия в области физики низких температур, которые включали открытие сверхтекучести в гелии."
+				"eng": "For his basic inventions and discoveries in the area of low temperature physics, which included the discovery of <<b>superfluidity<d>> in helium.",
+				"ru": "За основные изобретения и открытия в области физики низких температур, которые включали открытие <<b>сверхтекучести<d>> в гелии."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "subsequent ",
@@ -698,10 +698,10 @@
 			"transcription": "|ˈsʌbsɪkw(ə)nt|",
 			"pos": "a",
 			"examples": [{
-				"eng": "In subsequent decades, superconductivity was observed in several other materials.",
-				"ru": "В последующие десятилетия сверхпроводимость наблюдалась в нескольких других материалах."
+				"eng": "In <<b>subsequent<d>> decades, superconductivity was observed in several other materials.",
+				"ru": "В <<b>последующие<d>> десятилетия сверхпроводимость наблюдалась в нескольких других материалах."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "slightly ",
@@ -709,10 +709,10 @@
 			"transcription": "|ˈslaɪtlɪ|",
 			"pos": "adv",
 			"examples": [{
-				"eng": "Each different material becomes a superconductor at a slightly different temperature.",
+				"eng": "Each different material becomes a superconductor at a <<b>slightly<d>> different temperature.",
 				"ru": "Каждый отдельный материал становится сверхпроводником при несколько иной температуре."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "sensitive ",
@@ -720,10 +720,10 @@
 			"transcription": "|ˈsensɪtɪv|",
 			"pos": "a",
 			"examples": [{
-				"eng": "This is incredibly sensitive to small magnetic fields so that it can detect the magnetic fields from the heart and even the brain.",
-				"ru": "Он невероятно чувствителен к малым магнитным полям, так что может определять магнитные поля от сердца и даже мозга."
+				"eng": "This is incredibly <<b>sensitive<d>> to small magnetic fields so that it can detect the magnetic fields from the heart and even the brain.",
+				"ru": "Он невероятно <<b>чувствителен<d>> к малым магнитным полям, так что может определять магнитные поля от сердца и даже мозга."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "thin layer of insulator ",
@@ -731,10 +731,10 @@
 			"transcription": "|θɪn ˈleɪə əv ˈɪnsjʊleɪtə| ",
 			"pos": "phr",
 			"examples": [{
-				"eng": "In the same year, Brian Josephson made the important theoretical prediction that a supercurrent can flow between two pieces of superconductor separated by a thin layer of insulator.",
-				"ru": "В том же году Брайан Джозефсон сделал важное теоретическое предсказание, что сверхток может протекать между двумя частями сверхпроводника, разделенными тонким слоем диэлектрика."
+				"eng": "In the same year, Brian Josephson made the important theoretical prediction that a supercurrent can flow between two pieces of superconductor separated by a <<b>thin layer of insulator<d>>.",
+				"ru": "В том же году Брайан Джозефсон сделал важное теоретическое предсказание, что сверхток может протекать между двумя частями сверхпроводника, разделенными <<b>тонким слоем диэлектрика<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "through ",
@@ -742,10 +742,10 @@
 			"transcription": "|θruː|",
 			"pos": "adv",
 			"examples": [{
-				"eng": "What Ohm called resistance is the degree to which a cable increases an electric current running through it.",
-				"ru": "То, что Ом назвал сопротивлением – это степень, в которой кабель увеличивает электрический ток, протекающий через него."
+				"eng": "What Ohm called resistance is the degree to which a cable increases an electric current running <<b>through<d>> it.",
+				"ru": "То, что Ом назвал сопротивлением – это степень, в которой кабель увеличивает электрический ток, протекающий <<b>через<d>> него."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "transition temperature ",
@@ -753,10 +753,10 @@
 			"transcription": "|trænˈzɪʃ(ə)n ˈtemp(ə)rətʃə|",
 			"pos": "phr",
 			"examples": [{
-				"eng": "Reaching the specific transition temperature, the superconductor traps the magnetic flux of the outer field.",
-				"ru": "Достигая заданной температуры перехода сверхпроводник захватывает магнитный поток внешнего поля."
+				"eng": "Reaching the specific <<b>transition temperature<d>>, the superconductor traps the magnetic flux of the outer field.",
+				"ru": "Достигая заданной <<b>температуры<d>> перехода сверхпроводник захватывает магнитный поток внешнего поля."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "tend ",
@@ -764,10 +764,10 @@
 			"transcription": "|tend| ",
 			"pos": "v",
 			"examples": [{
-				"eng": "Students tend to sleep less while passing exams.",
-				"ru": "Студенты стремятся спать меньше в период экзаменов."
+				"eng": "Students <<b>tend<d>> to sleep less while passing exams.",
+				"ru": "Студенты <<b>стремятся<d>> спать меньше в период экзаменов."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "try ",
@@ -775,10 +775,10 @@
 			"transcription": "|traɪ| ",
 			"pos": "n",
 			"examples": [{
-				"eng": "Do a try to come.",
-				"ru": "Сделай попытку прийти."
+				"eng": "Do a <<b>try<d>> to come.",
+				"ru": "Сделай <<b>попытку<d>> прийти."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "try ",
@@ -786,10 +786,10 @@
 			"transcription": "|traɪ|",
 			"pos": "v",
 			"examples": [{
-				"eng": "Engineers are already trying to use superconductors in all these ways…",
-				"ru": "Инженеры уже пытаются использовать сверхпроводники всеми этими способами…"
+				"eng": "Engineers are already <<b>trying<d>> to use superconductors in all these ways…",
+				"ru": "Инженеры уже <<b>пытаются<d>> использовать сверхпроводники всеми этими способами…"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "value ",
@@ -797,10 +797,10 @@
 			"transcription": "|ˈvæljuː| ",
 			"pos": "n",
 			"examples": [{
-				"eng": "Would it reach an absolute minimum or would it approach an infinite value? ",
-				"ru": "Достигнет ли абсолютного минимума или приблизится к бесконечному значению."
+				"eng": "Would it reach an absolute minimum or would it approach an infinite <<b>value<d>>? ",
+				"ru": "Достигнет ли абсолютного минимума или приблизится к бесконечному <<b>значению<d>>."
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "wire ",
@@ -808,10 +808,10 @@
 			"transcription": "|ˈwaɪə|",
 			"pos": "n",
 			"examples": [{
-				"eng": "Who developed the first superconducting wire?",
-				"ru": "Кто разработал первый сверхпроводящий провод?"
+				"eng": "Who developed the first superconducting <<b>wire<d>>?",
+				"ru": "Кто разработал первый сверх<<b>провод<d>>ящий <<b>провод<d>>?"
 			}],
-			"module": 11
+			"module": "11"
 		},
 		{
 			"word": "Abbreviation ",
@@ -819,10 +819,10 @@
 			"transcription": "/əˌbriːviˈeɪʃn/ ",
 			"pos": "n",
 			"examples": [{
-				"eng": "DNA is the abbreviation for deoxyribonucleic acid.",
-				"ru": "ДНК – аббревиатура от дезоксирибонуклеиновая кислота."
+				"eng": "DNA is the <<b>abbreviation<d>> for deoxyribonucleic acid.",
+				"ru": "ДНК – <<b>аббревиатура<d>> от дезоксирибонуклеиновая кислота."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "abridge ",
@@ -830,10 +830,10 @@
 			"transcription": "/əˈbrɪdʒ/ ",
 			"pos": "v",
 			"examples": [{
-				"eng": "She has been asked to abridge the novel for radio.",
-				"ru": "Ее попросили сократить роман для трансляции по радио."
+				"eng": "She has been asked to <<b>abridge<d>> the novel for radio.",
+				"ru": "Ее попросили <<b>сократить<d>> роман для трансляции по радио."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "absence of pattern  ",
@@ -841,10 +841,10 @@
 			"transcription": "/ˈæbsəns əv ˈpætn/",
 			"pos": "phr",
 			"examples": [{
-				"eng": "Positive record of Ukraine in securing minority rights, absence of pattern and practice of discrimination have been confirmed by a number of authoritative international bodies.",
+				"eng": "Positive record of Ukraine in securing minority rights, <<b>absence of pattern<d>> and practice of discrimination have been confirmed by a number of authoritative international bodies.",
 				"ru": "Безупречная репутация Украины в деле обеспечения прав меньшинств, отсутствие систематических и отдельных проявлений дискриминации подтверждены целым рядом авторитетных международных органов."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "access key ",
@@ -852,10 +852,10 @@
 			"transcription": "/ˈækses kiː/",
 			"pos": "phr",
 			"examples": [{
-				"eng": "Guards have access keys to the stairwell.",
+				"eng": "Guards have <<b>access keys<d>> to the stairwell.",
 				"ru": "У охранников есть ключи доступа на лестничную клетку."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "accuracy ",
@@ -863,10 +863,10 @@
 			"transcription": "/ˈækjərəsi/",
 			"pos": "n",
 			"examples": [{
-				"eng": "They questioned the accuracy of the information in the file.",
-				"ru": "Они сомневались в точности информации в файле. "
+				"eng": "They questioned the <<b>accuracy<d>> of the information in the file.",
+				"ru": "Они сомневались в <<b>точности<d>> информации в файле. "
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "accurate ",
@@ -874,10 +874,10 @@
 			"transcription": "/ˈækjərət/ ",
 			"pos": "adj",
 			"examples": [{
-				"eng": "Automatic translation isn’t that accurate, but it was certainly better than starting from scratch.",
-				"ru": "Автоматический перевод не такой точный, но работать с его использованием лучше, чем начинать с чистого листа."
+				"eng": "Automatic translation isn’t that <<b>accurate<d>>, but it was certainly better than starting from scratch.",
+				"ru": "Автоматический перевод не такой <<b>точный<d>>, но работать с его использованием лучше, чем начинать с чистого листа."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "action ",
@@ -885,10 +885,10 @@
 			"transcription": "/ˈækʃn/",
 			"pos": "n",
 			"examples": [{
-				"eng": "A computer program which does things in reaction to your actions is interactive.",
-				"ru": "Компьютерная программа, которая реагирует на ваши действия, называется интерактивной."
+				"eng": "A computer program which does things in reaction to your <<b>actions<d>> is interactive.",
+				"ru": "Компьютерная программа, которая реагирует на ваши <<b>действия<d>>, называется интерактивной."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "action bar ",
@@ -896,10 +896,10 @@
 			"transcription": "/ˈækʃn bɑː(r)/",
 			"pos": "phr",
 			"examples": [{
-				"eng": "When an update is available, an icon in the action bar displays some explaining text.",
-				"ru": "Если доступно обновление, значок в горизонтальном меню отображает текст пояснения."
+				"eng": "When an update is available, an icon in the <<b>action bar<d>> displays some explaining text.",
+				"ru": "Если доступно обновление, значок в <<b>горизонтальном меню<d>> отображает текст пояснения."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "Ada programming language ",
@@ -910,7 +910,7 @@
 				"eng": "In 1980, the US Department of Defense settled on (in honour of Ada Lovelace) the name Ada for a new standardized programming language.",
 				"ru": "В 1980 американское Министерство обороны выбрало (в честь Ады Лавлейс) название АДА для нового типового языка программирования."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "alter ",
@@ -918,10 +918,10 @@
 			"transcription": "/ˈɔːltə(r)/ ",
 			"pos": "v",
 			"examples": [{
-				"eng": "There is no reason to alter those basic parameters.",
-				"ru": "Нет причин изменять эти основные параметры."
+				"eng": "There is no reason to <<b>alter<d>> those basic parameters.",
+				"ru": "Нет причин <<b>изменять<d>> эти основные параметры."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "backup ",
@@ -929,10 +929,10 @@
 			"transcription": "/ˈbækʌp/ ",
 			"pos": "adj",
 			"examples": [{
-				"eng": "We could switch the sensor input to the backup scanners.",
-				"ru": "Мы можем переключить ввод данных на сенсоры с основных сканеров на дублирующие."
+				"eng": "We could switch the sensor input to the <<b>backup<d>> scanners.",
+				"ru": "Мы можем переключить ввод данных на сенсоры с основных сканеров на <<b>дублирующие<d>>."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "bit ",
@@ -940,10 +940,10 @@
 			"transcription": "/bɪt/",
 			"pos": "n  ",
 			"examples": [{
-				"eng": "A bit is the smallest unit of information used by a computer.",
+				"eng": "A <<b>bit<d>> is the smallest unit of information used by a computer.",
 				"ru": "Бит – мельчайшая единица информации, используемая компьютером."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "bit density ",
@@ -951,10 +951,10 @@
 			"transcription": "/bɪt ˈdensəti/",
 			"pos": "phr",
 			"examples": [{
-				"eng": "A bit density and volume of the information which can be recorded to the unit of the plate surface depend on the sizes of domains.",
-				"ru": "Плотность записи, количество информации, которое может быть записано на единицу поверхности пластины, связано с размерами доменов."
+				"eng": "A <<b>bit density<d>> and volume of the information which can be recorded to the unit of the plate surface depend on the sizes of domains.",
+				"ru": "<<b>Плотность записи<d>>, количество информации, которое может быть записано на единицу поверхности пластины, связано с размерами доменов."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "built-in ",
@@ -962,10 +962,10 @@
 			"transcription": "/ˌbɪlt ˈɪn/ ",
 			"pos": "adj",
 			"examples": [{
-				"eng": "The device has a built-in microphone and speakers.",
-				"ru": "У этого устройства присутствует встроенный микрофон и динамики."
+				"eng": "The device has a <<b>built-in<d>> microphone and speakers.",
+				"ru": "У этого устройства присутствует <<b>встроенный<d>> микрофон и динамики."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "calculate ",
@@ -973,10 +973,10 @@
 			"transcription": "/ˈkælkjuleɪt/ ",
 			"pos": "v",
 			"examples": [{
-				"eng": "Use the formula to calculate the volume of the container.",
+				"eng": "Use the formula to <<b>calculate<d>> the volume of the container.",
 				"ru": "Используйте формулу для расчета объема контейнера."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "calculating machine ",
@@ -984,10 +984,10 @@
 			"transcription": "/ˈkælkjuleɪtɪŋ məˈʃiːn/ ",
 			"pos": "n",
 			"examples": [{
-				"eng": "In 1623 Wilhelm Schickard designed a calculating machine, but abandoned the project, when the prototype he had started building was destroyed by a fire in 1624.",
-				"ru": "В 1623 году Вильгельм Шиккард разработал счётную машину, но отказался от проекта, когда прототип, который он начал строить, был уничтожен пожаром в 1624 году."
+				"eng": "In 1623 Wilhelm Schickard designed a <<b>calculating machine<d>>, but abandoned the project, when the prototype he had started building was destroyed by a fire in 1624.",
+				"ru": "В 1623 году Вильгельм Шиккард разработал <<b>счётную машину<d>>, но отказался от проекта, когда прототип, который он начал строить, был уничтожен пожаром в 1624 году."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "cancel ",
@@ -995,10 +995,10 @@
 			"transcription": "/ˈkænsl/ ",
 			"pos": "v",
 			"examples": [{
-				"eng": "The wedding was cancelled at the last minute.",
-				"ru": "Свадьбу отменили в последний момент."
+				"eng": "The wedding was <<b>cancelled<d>> at the last minute.",
+				"ru": "Свадьбу <<b>отменили<d>> в последний момент."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "canned software ",
@@ -1006,10 +1006,10 @@
 			"transcription": "/kænd ˈsɒftweə(r)/",
 			"pos": "phr",
 			"examples": [{
-				"eng": "Canned software is a software product or solution that cannot be modified or altered beyond the original functionality.",
-				"ru": "Стандартное программное обеспечение – это программное обеспечение, исходный функционал которого не может быть изменен. "
+				"eng": "<<b>Canned software<d>> is a software product or solution that cannot be modified or altered beyond the original functionality.",
+				"ru": "<<b>Стандартное программное обеспечение<d>> – это программное обеспечение, исходный функционал которого не может быть изменен. "
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "capacity ",
@@ -1017,10 +1017,10 @@
 			"transcription": "/kəˈpæsəti/ ",
 			"pos": "n",
 			"examples": [{
-				"eng": "The storage capacity of the brain is thought to be over 10 terabytes.",
-				"ru": "Считается, что ёмкость памяти мозга превышает 10 терабайтов. "
+				"eng": "The storage <<b>capacity<d>> of the brain is thought to be over 10 terabytes.",
+				"ru": "Считается, что <<b>ёмкость<d>> памяти мозга превышает 10 терабайтов. "
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "circuit ",
@@ -1028,10 +1028,10 @@
 			"transcription": "/ˈsɜːkɪt/ ",
 			"pos": "n",
 			"examples": [{
-				"eng": "Flexible electronics are circuits and systems that can be bent, folded, stretched or rolled up without losing their functionality",
-				"ru": "Гибкая электроника – это схемы и системы, которые можно гнуть, сгибать, растягивать и скручивать без поломок."
+				"eng": "Flexible electronics are <<b>circuits<d>> and systems that can be bent, folded, stretched or rolled up without losing their functionality",
+				"ru": "Гибкая электроника – это <<b>схемы<d>> и системы, которые можно гнуть, сгибать, растягивать и скручивать без поломок."
 			}],
-			"module": 5
+			"module": "5"
 		},
 		{
 			"word": "acquaintance  ",
@@ -1039,10 +1039,10 @@
 			"transcription": "/əˈkweɪntəns/",
 			"pos": "n",
 			"examples": [{
-				"eng": "Do you have any friends and acquaintances who are juniors or even seniors?",
-				"ru": "Есть ли у вас друзья и знакомые младшего или даже старшего возраста?"
+				"eng": "Do you have any friends and <<b>acquaintances<d>> who are juniors or even seniors?",
+				"ru": "Есть ли у вас друзья и <<b>знакомые<d>> младшего или даже старшего возраста?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "affect ",
@@ -1050,10 +1050,10 @@
 			"transcription": "/əˈfekt/",
 			"pos": "v",
 			"examples": [{
-				"eng": "Will the rainy weather affect the election results?",
-				"ru": "Повлияет ли дождливая погода на результаты выборов?"
+				"eng": "Will the rainy weather <<b>affect<d>> the election results?",
+				"ru": "<<b>Повлияет<d>> ли дождливая погода на результаты выборов?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "ability ",
@@ -1061,10 +1061,10 @@
 			"transcription": "/əˈbɪləti/",
 			"pos": "n",
 			"examples": [{
-				"eng": "MSTU is intensely focused on creating unique scientific and educational environment aimed at the fulfillment of tasks of the research university and the ability to form a scientific and engineering elite.",
-				"ru": "МГТУ уделяет большое внимание созданию уникальной научно-образовательной среды, направленной на выполнение задач исследовательского университета и возможность формирования научной и инженерной элиты."
+				"eng": "MSTU is intensely focused on creating unique scientific and educational environment aimed at the fulfillment of tasks of the research university and the <<b>ability<d>> to form a scientific and engineering elite.",
+				"ru": "МГТУ уделяет большое внимание созданию уникальной научно-образовательной среды, направленной на выполнение задач исследовательского университета и <<b>возможность<d>> формирования научной и инженерной элиты."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "become ",
@@ -1072,10 +1072,10 @@
 			"transcription": "/bɪˈkʌm/",
 			"pos": "v",
 			"examples": [{
-				"eng": "You have already finished high school and become a college or university student.",
+				"eng": "You have already finished high school and <<b>become<d>> a college or university student.",
 				"ru": "Вы уже закончили среднюю школу и стали студентом колледжа или университета."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "brain ",
@@ -1083,10 +1083,10 @@
 			"transcription": "/breɪn/",
 			"pos": "n",
 			"examples": [{
-				"eng": "We know that physical activity affects the brain in a number of positive ways and one of those is a boost to memory. ",
-				"ru": "Мы знаем, что физическая активность влияет на мозг разными положительными способами, и одно из них - улучшение памяти."
+				"eng": "We know that physical activity affects the <<b>brain<d>> in a number of positive ways and one of those is a boost to memory. ",
+				"ru": "Мы знаем, что физическая активность влияет на <<b>мозг<d>> разными положительными способами, и одно из них - улучшение памяти."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "consider ",
@@ -1094,10 +1094,10 @@
 			"transcription": "/kənˈsɪdə(r)/",
 			"pos": "v",
 			"examples": [{
-				"eng": "Accept means to agree to take something or to consider something as reasonable or true",
-				"ru": "Принять означает согласиться принять что-либо или считать что-то разумным или истинным."
+				"eng": "Accept means to agree to take something or to <<b>consider<d>> something as reasonable or true",
+				"ru": "Принять означает согласиться принять что-либо или <<b>считать<d>> что-то разумным или истинным."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "education ",
@@ -1105,10 +1105,10 @@
 			"transcription": "/ˌedʒuˈkeɪʃn/",
 			"pos": "n",
 			"examples": [{
-				"eng": "The system of engineering education gained recognition all over the world.",
-				"ru": "Система инженерного образования получила признание во всем мире."
+				"eng": "The system of engineering <<b>education<d>> gained recognition all over the world.",
+				"ru": "Система инженерного <<b>образования<d>> получила признание во всем мире."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "engineer",
@@ -1116,10 +1116,10 @@
 			"transcription": "/ˌendʒɪˈnɪə(r)/",
 			"pos": "n",
 			"examples": [{
-				"eng": "Why did you decide to become an engineer?",
-				"ru": "Почему ты решил стать инженером?"
+				"eng": "Why did you decide to become an <<b>engineer<d>>?",
+				"ru": "Почему ты решил стать <<b>инженером<d>>?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "ensure ",
@@ -1127,10 +1127,10 @@
 			"transcription": "/ɪnˈʃʊə(r)/",
 			"pos": "v",
 			"examples": [{
-				"eng": "Is higher education essential to ensure the future success of graduates?",
-				"ru": "Важно ли высшее образование для того, чтобы обеспечить будущие успехи выпускников?"
+				"eng": "Is higher education essential to <<b>ensure<d>> the future success of graduates?",
+				"ru": "Важно ли высшее образование для того, чтобы <<b>обеспечить<d>> будущие успехи выпускников?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "especially ",
@@ -1138,10 +1138,10 @@
 			"transcription": "/ɪˈspeʃəli/",
 			"pos": "adv",
 			"examples": [{
-				"eng": "To take a nap is to get a brief sleep, especially during the day.",
-				"ru": "To take a nap - значит ненадолго поспать, особенно днем."
+				"eng": "To take a nap is to get a brief sleep, <<b>especially<d>> during the day.",
+				"ru": "To take a nap - значит ненадолго поспать, <<b>особенно<d>> днем."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "experience ",
@@ -1149,10 +1149,10 @@
 			"transcription": "/ɪkˈspɪəriəns/",
 			"pos": "n",
 			"examples": [{
-				"eng": "Do you have any experience in working with children?",
-				"ru": "Есть ли у вас опыт работы с детьми?"
+				"eng": "Do you have any <<b>experience<d>> in working with children?",
+				"ru": "Есть ли у вас <<b>опыт<d>> работы с детьми?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "grade ",
@@ -1160,10 +1160,10 @@
 			"transcription": "/ɡreɪd/",
 			"pos": "n v",
 			"examples": [{
-				"eng": "But which scientific tips can help you get those perfect grades?",
-				"ru": "Но какие научные советы помогут вам получить отличные оценки?"
+				"eng": "But which scientific tips can help you get those perfect <<b>grades<d>>?",
+				"ru": "Но какие научные советы помогут вам получить отличные <<b>оценки<d>>?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "graduate ",
@@ -1171,10 +1171,10 @@
 			"transcription": "/ˈɡrædʒuət/",
 			"pos": "n v",
 			"examples": [{
-				"eng": "Is higher education essential to ensure the future success of graduates?",
-				"ru": "Важно ли высшее образование для обеспечения будущих успехов выпускников?"
+				"eng": "Is higher education essential to ensure the future success of <<b>graduates<d>>?",
+				"ru": "Важно ли высшее образование для обеспечения будущих успехов <<b>выпускников<d>>?"
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "higher",
@@ -1182,10 +1182,10 @@
 			"transcription": "/ˈhaɪə(r)/",
 			"pos": "a",
 			"examples": [{
-				"eng": "MSTU was the first among technical higher educational institutions that received the status of technical university in 1989.",
-				"ru": "МГТУ первым среди технических высших учебных заведений получил статус технического вуза в 1989 году."
+				"eng": "MSTU was the first among technical <<b>higher<d>> educational institutions that received the status of technical university in 1989.",
+				"ru": "МГТУ первым среди технических <<b>высших<d>> учебных заведений получил статус технического вуза в 1989 году."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "improve ",
@@ -1193,10 +1193,10 @@
 			"transcription": "/ɪmˈpruːv/",
 			"pos": "v",
 			"examples": [{
-				"eng": "Some studies have shown that certain types of classical music can help improve concentration.",
-				"ru": "Некоторые исследования показали, что определенные виды классической музыки могут помочь улучшить концентрацию внимания."
+				"eng": "Some studies have shown that certain types of classical music can help <<b>improve<d>> concentration.",
+				"ru": "Некоторые исследования показали, что определенные виды классической музыки могут помочь <<b>улучшить<d>> концентрацию внимания."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "mean ",
@@ -1204,10 +1204,10 @@
 			"transcription": "/miːn/",
 			"pos": "v",
 			"examples": [{
-				"eng": "Alice thinks that stress means pressure or worry caused by a difficult situation.",
-				"ru": "Алиса считает, что стресс означает давление или беспокойство, вызванное сложной ситуацией."
+				"eng": "Alice thinks that stress <<b>means<d>> pressure or worry caused by a difficult situation.",
+				"ru": "Алиса считает, что стресс <<b>означает<d>> давление или беспокойство, вызванное сложной ситуацией."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "memory",
@@ -1215,10 +1215,10 @@
 			"transcription": "/ˈmeməri/",
 			"pos": "n",
 			"examples": [{
-				"eng": "Memory is hard to work with, but it is still malleable and you can force memories into your brain.",
-				"ru": "С памятью сложно работать, но она по-прежнему податлива, и вы можете вбить воспоминания в свой мозг."
+				"eng": "<<b>Memory<d>> is hard to work with, but it is still malleable and you can force memories into your brain.",
+				"ru": "С <<b>памятью<d>> сложно работать, но она по-прежнему податлива, и вы можете вбить воспоминания в свой мозг."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "receive ",
@@ -1226,10 +1226,10 @@
 			"transcription": "/rɪˈsiːv/",
 			"pos": "v",
 			"examples": [{
-				"eng": "I will receive my bachelor’s degree in the spring.",
-				"ru": "Весной я получу степень бакалавра."
+				"eng": "I will <<b>receive<d>> my bachelor’s degree in the spring.",
+				"ru": "Весной я <<b>получу<d>> степень бакалавра."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "remember",
@@ -1237,10 +1237,10 @@
 			"transcription": "/rɪˈmembə(r)/",
 			"pos": "v",
 			"examples": [{
-				"eng": "She remembered to close the windows before she went out.",
-				"ru": "Она вспомнила, что нужно закрыть окна перед выходом."
+				"eng": "She <<b>remembered<d>> to close the windows before she went out.",
+				"ru": "Она <<b>вспомнила<d>>, что нужно закрыть окна перед выходом."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "quality ",
@@ -1248,10 +1248,10 @@
 			"transcription": "/ˈkwɒləti/",
 			"pos": "n",
 			"examples": [{
-				"eng": "The quality of training at the university is determined by the educational standards and programs.",
-				"ru": "Качество обучения в вузе определяется образовательными стандартами и программами."
+				"eng": "The <<b>quality<d>> of training at the university is determined by the educational standards and programs.",
+				"ru": "<<b>Качество<d>> обучения в вузе определяется образовательными стандартами и программами."
 			}],
-			"module": 1
+			"module": "1"
 		},
 		{
 			"word": "usually ",
@@ -1259,10 +1259,10 @@
 			"transcription": "/ˈjuːʒuəli/",
 			"pos": "adv",
 			"examples": [{
-				"eng": "She usually designs books but she also works on a lot of other things.",
-				"ru": "Обычно она занимается дизайном книг, но работает и над множеством других вещей."
+				"eng": "She <<b>usually<d>> designs books but she also works on a lot of other things.",
+				"ru": "<<b>Обычно<d>> она занимается дизайном книг, но работает и над множеством других вещей."
 			}],
-			"module": 1
+			"module": "1"
 		}
 	]
 }
