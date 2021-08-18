@@ -230,7 +230,7 @@ def main():
         res_of_parse = parse_entry(entry, file, a)
         a = res_of_parse[1]
         tagged_file.write(entry['word']+'\n'+entry['translation']+'\n'+entry['transcription']+'\n'+entry['pos']+'\n'+
-                          res_of_parse[0]['eng']+'\n'+res_of_parse[0]['ru']+'\n\n')
+                          res_of_parse[0]['eng']+'\n'+res_of_parse[0]['ru']+'\n'+str(entry['module'])+'\n\n')
         
     file.close()
     tagged_file.close()
