@@ -1,6 +1,8 @@
 body {
   background-color: #c6d8ec;
   padding: 2.5%;
+  position:relative;
+  padding-bottom: 100px;
 }
 
 .dict_btn{
@@ -213,4 +215,11 @@ a.word-link {
   position: fixed;
   left: 0;
   top: 0;
+}
+
+#fml {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
 }
