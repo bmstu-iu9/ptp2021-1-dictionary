@@ -65,7 +65,7 @@ function myAction(){
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = process;
-url = document.location.origin + "/include/stroka.html";
+url = document.location.origin + "/ptp2021-1-dictionary/include/stroka.html";
 //url = document.location.origin + "/include/stroka.html";
 //alert(url);
 xhr.open("GET", url, true);
