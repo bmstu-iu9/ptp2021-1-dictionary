@@ -65,7 +65,7 @@ function myAction(){
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = process;
-url = document.location.origin + "/ptp2021-1-dictionary/include/stroka.html";
+url = document.location.origin + "/include/stroka.html";
 //url = document.location.origin + "/include/stroka.html";
 //alert(url);
 xhr.open("GET", url, true);
@@ -76,8 +76,29 @@ function process()
     var resp = xhr.responseText;
     let div=document.createElement('div');
     div.innerHTML=resp.toString();
+    div.id="fixnavbar";
+    div.style.zIndex=10000;
     document.body.prepend(div);
     document.getElementById('content').style.display='';
     document.getElementById('myInput').onkeyup = myAction;
+    let header = document.getElementById('fixnavbar');
+    let inner=document.querySelector('.wrapper');
+    let h=header.style.top;
+    let h1=h + header.clientHeight;
+    window.addEventListener('scroll', function() {
+      if (pageYOffset > 49) { 
+        header.style.position="fixed";
+        header.style.top="0px";
+        header.style.width="95%";
+        document.body.style.paddingTop=h1.toString()+"px";
+      }
+      else {
+        header.style.position="relative";
+        header.style.top=h;
+        header.style.width="100%";
+        inner.style.width="100%";
+        document.body.style.paddingTop=h.toString()+"px";
+      }
+    });
   }
 }
