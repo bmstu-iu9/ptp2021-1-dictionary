@@ -201,3 +201,16 @@ a.word-link {
 .container {
   width:80%;
 }
+
+.fixnavbar {
+  width: 95%;
+  z-index: 100;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header_fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
