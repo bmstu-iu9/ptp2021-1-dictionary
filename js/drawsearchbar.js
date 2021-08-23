@@ -41,7 +41,7 @@ function suggestElements(arrOfMatches){
       myLink.innerHTML = element;
 	  let index = words.findIndex(obj => obj.word==element);
 	  myLink.href = "/ptp2021-1-dictionary/pages/wordpage.html?wordnumber=" + index;
-	  //myLink.href = "pages/wordpage.html?wordnumber=" + index;
+	  //myLink.href = "../pages/wordpage.html?wordnumber=" + index;
       myLink.style = "margin: 1%;";     
       mySuggestions.appendChild(myLink);
     });
@@ -81,6 +81,7 @@ function process()
     document.body.prepend(div);
     document.getElementById('content').style.display='';
     document.getElementById('myInput').onkeyup = myAction;
+	document.getElementById('myInput').onreset = clearPreviouslySuggestedElements;
     let header = document.getElementById('fixnavbar');
     let inner=document.querySelector('.wrapper');
     let h=header.style.top;
