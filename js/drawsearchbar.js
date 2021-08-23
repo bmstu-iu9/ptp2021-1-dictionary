@@ -40,8 +40,8 @@ function suggestElements(arrOfMatches){
       let myLink = document.createElement("a");
       myLink.innerHTML = element;
 	  let index = words.findIndex(obj => obj.word==element);
-	  //myLink.href = "/ptp2021-1-dictionary/pages/wordpage.html?wordnumber=" + index;
-	  myLink.href = "../pages/wordpage.html?wordnumber=" + index;
+	  myLink.href = "/ptp2021-1-dictionary/pages/wordpage.html?wordnumber=" + index;
+	  //myLink.href = "../pages/wordpage.html?wordnumber=" + index;
       myLink.style = "margin: 1%;";     
       mySuggestions.appendChild(myLink);
     });
@@ -65,8 +65,8 @@ function myAction(){
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = process;
-//url = document.location.origin + "/ptp2021-1-dictionary/include/stroka.html";
-url = document.location.origin + "/include/stroka.html";
+url = document.location.origin + "/ptp2021-1-dictionary/include/stroka.html";
+//url = document.location.origin + "/include/stroka.html";
 //alert(url);
 xhr.open("GET", url, true);
 xhr.send();
