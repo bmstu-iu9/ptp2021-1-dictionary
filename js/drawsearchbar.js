@@ -88,9 +88,9 @@ function process()
     let h1=h + header.clientHeight;
     window.addEventListener('scroll', function() {
       if (pageYOffset > 49) { 
-        header.style.position="fixed";
+        header.style.position="sticky";
         header.style.top="0px";
-        header.style.width="95%";
+        header.style.width="100%";
         document.body.style.paddingTop=h1.toString()+"px";
       }
       else {
