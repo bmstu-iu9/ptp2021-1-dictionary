@@ -8,7 +8,7 @@ document.getElementById('filter_1').style.color = "antiquewhite";
 timetowork();
 
 function changefilter(j) {
-    ehetenandayo = 0;
+    //ehetenandayo = 0;
     var is_off = document.getElementById('filter_' + j).style.backgroundColor == "aliceblue" || document.getElementById('filter_' + j).style.backgroundColor == "";
     if (is_off) {
         document.getElementById('filter_' + j).style.backgroundColor = "dimgrey";
