@@ -201,6 +201,24 @@ function search_word_in_example(word, s) {
     return [word, s];
 }
 
+function search_word_in_s(word, s) {
+    let found_word = "";
+    let ind = s.indexOf("<<b>");
+    while (ind != -1) {
+        let ind1 = s.indexOf("<d>>");
+        found_word += s.slice(ind + 4, ind1);
+        found_word += " ";
+        s = s.slice(0, ind) + "______" + s.slice(ind1 + 4, s.length);
+        ind = s.indexOf("<<b>");
+    }
+    found_word = found_word.trim();
+    if (found_word != "") {
+        return [found_word, s];
+    } else {
+        return [word, s];
+    }
+}
+
 function choose_and_fill_tasks() {
     let ir = get_random(word_articles.length - 1);
     let word = word_articles[ir].word.trim();
@@ -212,7 +230,12 @@ function choose_and_fill_tasks() {
         }
     } else {
         let s = word_articles[ir].examples[0].eng;
-        let a = search_word_in_example(word, s);
+        let a;
+        if (s.indexOf("<<b>") != -1) {
+            a = search_word_in_s(word, s);
+        } else {
+            a = search_word_in_example(word, s);
+        }
         word = a[0];
         s = a[1];
         write_exercise(s);

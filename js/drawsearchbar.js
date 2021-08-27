@@ -6,6 +6,9 @@
 //  оптимизировать еще больше не стану тк в объекте в 2000 слов показывает скорость менее милисекунды.
 //  нам этого более чем достаточно.
 
+
+
+
 function searchMatchingElements(pattern){
   if (pattern == '') {
     return [];
@@ -81,7 +84,7 @@ function process()
     document.body.prepend(div);
     document.getElementById('content').style.display='';
     document.getElementById('myInput').onkeyup = myAction;
-	document.getElementById('myInput').onreset = clearPreviouslySuggestedElements;
+	document.getElementById('myInput').onclick = clearPreviouslySuggestedElements;
     let header = document.getElementById('fixnavbar');
     let inner=document.querySelector('.wrapper');
     let h=header.style.top;
