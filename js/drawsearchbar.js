@@ -85,6 +85,12 @@ function process()
     document.getElementById('content').style.display='';
     document.getElementById('myInput').onkeyup = myAction;
 	document.getElementById('myInput').onclick = clearPreviouslySuggestedElements;
+	document.getElementById('forsearchbar').onclick = function(e) {
+	  if(e.target != document.getElementById('myInput')) {
+		clearPreviouslySuggestedElements();
+		document.getElementById("myInput").value = "";
+      }
+	}
     let header = document.getElementById('fixnavbar');
     let inner=document.querySelector('.wrapper');
     let h=header.style.top;
