@@ -57,8 +57,17 @@
 				ind3 = mydata[index].examples[0].ru.indexOf("<<b>");
 				ind4 = mydata[index].examples[0].ru.indexOf("<d>>");
 				
-				engexmp = mydata[index].examples[0].eng.slice(0,ind1) + "<b>" + mydata[index].word + "</b>" + mydata[index].examples[0].eng.slice(ind2+4);
-				ruexmp = mydata[index].examples[0].ru.slice(0,ind3) + "<b>" + mydata[index].examples[0].ru.slice(ind3+4,ind4) + "</b>" + mydata[index].examples[0].ru.slice(ind4+4);
+				if (ind1 == -1) {
+					engexmp = mydata[index].examples[0].eng;
+				} else {
+					engexmp = mydata[index].examples[0].eng.slice(0,ind1) + "<b>" + mydata[index].word + "</b>" + mydata[index].examples[0].eng.slice(ind2+4);
+				}
+				
+				if (ind3 == -1) {
+					ruexmp = mydata[index].examples[0].ru;
+				} else {
+					ruexmp = mydata[index].examples[0].ru.slice(0,ind3) + "<b>" + mydata[index].examples[0].ru.slice(ind3+4,ind4) + "</b>" + mydata[index].examples[0].ru.slice(ind4+4);
+				}
 				
 				wordandtranclation.innerHTML = mydata[index].word + "(" + mydata[index].pos + ") - " + mydata[index].translation;
 				transcription.innerHTML =  mydata[index].transcription;
