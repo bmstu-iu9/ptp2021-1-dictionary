@@ -36,6 +36,12 @@
 			function showworddata()
 			{
                 var mydata = words;
+				var engexmp = "";
+				var ruexmp = "";
+				var ind1 = 0;
+				var ind2 = 0;
+				var ind3 = 0;
+				var ind4 = 0;
 				
 				var params = (new URL(document.location)).searchParams;
 				var index = parseInt(params.get('wordnumber'));
@@ -45,11 +51,19 @@
 				var exampleeng = document.getElementById('exampleeng');
 				var exampleru = document.getElementById('exampleru');
 				var audiotag = document.getElementById('audiotag');
-
+				
+				ind1 = mydata[index].examples[0].eng.indexOf("<<b>");
+				ind2 = mydata[index].examples[0].eng.indexOf("<d>>");
+				ind3 = mydata[index].examples[0].ru.indexOf("<<b>");
+				ind4 = mydata[index].examples[0].ru.indexOf("<d>>");
+				
+				engexmp = mydata[index].examples[0].eng.slice(0,ind1) + "<b>" + mydata[index].word + "</b>" + mydata[index].examples[0].eng.slice(ind2+4);
+				ruexmp = mydata[index].examples[0].ru.slice(0,ind3) + "<b>" + mydata[index].examples[0].ru.slice(ind3+4,ind4) + "</b>" + mydata[index].examples[0].ru.slice(ind4+4);
+				
 				wordandtranclation.innerHTML = mydata[index].word + "(" + mydata[index].pos + ") - " + mydata[index].translation;
 				transcription.innerHTML =  mydata[index].transcription;
-				exampleeng.innerHTML = mydata[index].examples[0].eng;
-				exampleru.innerHTML = mydata[index].examples[0].ru;
+				exampleeng.innerHTML = engexmp;
+				exampleru.innerHTML = ruexmp;
 				audiotag.src = "../assets/audio/" + mydata[index].word + ".mp3";
             }
 		</script>
