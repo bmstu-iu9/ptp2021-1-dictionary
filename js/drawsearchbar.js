@@ -7,7 +7,11 @@
 //  нам этого более чем достаточно.
 
 
-
+function checkMyInput() {
+	if (document.getElementById('myInput').value != "") {
+		location.href = mySuggestions.childNodes[0].href;
+	}
+}
 
 function searchMatchingElements(pattern){
   if (pattern == '') {
@@ -85,6 +89,7 @@ function process()
     document.getElementById('content').style.display='';
     document.getElementById('myInput').onkeyup = myAction;
 	document.getElementById('myInput').onclick = clearPreviouslySuggestedElements;
+	document.getElementById('searchButton').onclick = checkMyInput;
 	document.getElementById('forsearchbar').onclick = function(e) {
 	  if(e.target != document.getElementById('myInput')) {
 		clearPreviouslySuggestedElements();
