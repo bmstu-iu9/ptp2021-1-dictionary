@@ -82,7 +82,10 @@ function make_answers_ind(ir) {
     //document.writeln("Слов из этого модуля с такой же часть речи: " + viable.length);
     //alert(viable);
     if (viable.length < 4) {
-        alert("Подходящих слов всего лишь " + viable.length +", так что я спасу нас обоих от головной боли, не прогружая эту страницу дальше");
+        ir = get_random(word_articles.length - 1);
+        let a1 = make_answers_ind(ir);
+        return a1;
+        //alert("Подходящих слов всего лишь " + viable.length +", так что я спасу нас обоих от головной боли, не прогружая эту страницу дальше");
     } else {
         answers_ind = fillanswers(viable, answers_ind);
     }
