@@ -82,15 +82,12 @@ function make_answers_ind(ir) {
     //document.writeln("Слов из этого модуля с такой же часть речи: " + viable.length);
     //alert(viable);
     if (viable.length < 4) {
-        ir = get_random(word_articles.length - 1);
-        let a1 = make_answers_ind(ir);
-        return a1;
-        //alert("Подходящих слов всего лишь " + viable.length +", так что я спасу нас обоих от головной боли, не прогружая эту страницу дальше");
+        return [0, 0, 0];
     } else {
         answers_ind = fillanswers(viable, answers_ind);
     }
     //alert(answers_ind);
-    return [pos_right, answers_ind];
+    return [pos_right, answers_ind, 1];
 }
 
 function make_answers(answers_ind) {
@@ -244,13 +241,17 @@ function choose_and_fill_tasks() {
         write_exercise(s);
     }
     let a1 = make_answers_ind(ir);
-    let pos_right = a1[0];
-    let answers_ind = a1[1];
-    let answers = make_answers(answers_ind);
-    if (task1 == "fill") {
-        answers[pos_right] = word;
+    if (a1[2] == 0) {
+        choose_and_fill_tasks();
+    } else {
+        let pos_right = a1[0];
+        let answers_ind = a1[1];
+        let answers = make_answers(answers_ind);
+        if (task1 == "fill") {
+            answers[pos_right] = word;
+        }
+        write_answers(answers);
+        switch_off_radio_button();
+        check_answer_on_click(pos_right, answers);
     }
-    write_answers(answers);
-    switch_off_radio_button();
-    check_answer_on_click(pos_right, answers);
 }
