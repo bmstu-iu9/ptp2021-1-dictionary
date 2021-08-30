@@ -83,9 +83,27 @@ function make_answers_ind(ir) {
     //alert(viable);
     if (viable.length < 4) {
         ir = get_random(word_articles.length - 1);
+        let word = word_articles[ir].word.trim();
+        if (task1 == "choose") {
+            if (lang1 == "ru") {
+                write_exercise(word_articles[ir].word);
+            } else {
+                write_exercise(word_articles[ir].translation);
+            }
+        } else {
+            let s = word_articles[ir].examples[0].eng;
+            let a;
+            if (s.indexOf("<<b>") != -1) {
+                a = search_word_in_s(word, s);
+            } else {
+                a = search_word_in_example(word, s);
+            }
+            word = a[0];
+            s = a[1];
+            write_exercise(s);
+        }
         let a1 = make_answers_ind(ir);
         return a1;
-        //alert("Подходящих слов всего лишь " + viable.length +", так что я спасу нас обоих от головной боли, не прогружая эту страницу дальше");
     } else {
         answers_ind = fillanswers(viable, answers_ind);
     }
